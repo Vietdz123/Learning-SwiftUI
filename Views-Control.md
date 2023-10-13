@@ -24,7 +24,9 @@ struct ArticleView: View {
 
 ![](images/View-Controls/text.jpeg)
 
-# II. TextField
+# II. TextField + SecureField
+
+`TextFiled + SecureField`:
 
 ```swift
 struct ContentView: View {
@@ -42,7 +44,6 @@ struct ContentView: View {
 struct SecurityFiled: View {
     @State var tName : String = ""
     var body: some View {
-        
         SecureField("Enter a Password", text: $tName)
         .padding()
         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -54,3 +55,72 @@ Output:
 
 ![](images/View-Controls/textFiled.png)
 
+# III. Image
+
+Ta thấy rằng phải xét `aspectRatio` trước rồi mới xét `frame`.
+
+```swift
+VStack(spacing: 20) {
+    Image("Bangkok")
+        .resizable()
+        .aspectRatio(contentMode: .fill) // .scaledToFill()
+        .frame(width: 200, height: 200)
+        .border(Color.red, width: 3)
+    Image("Bangkok")
+        .resizable()
+        .aspectRatio(contentMode: .fit) // .scaledToFit()
+        .frame(width: 200, height: 200)
+        .border(Color.red, width: 3)
+    Image("Bangkok")
+        .resizable()
+        .aspectRatio(0.25, contentMode: .fit)
+        .frame(width: 200, height: 200)
+        .border(Color.red, width: 3)
+}
+```
+
+Output tương ứng: 
+
+![](images/View-Controls/image.png)
+
+Ta cũng có thể sử dụng `scaleEffect` để tăng size view hoặc `.rotationEffect(.degrees(100))` để xoay
+
+# IV. Button
+
+```swift
+struct ButtonView: View {
+    var body: some View {
+        Button {
+            print("Siuuuuu")
+        } label: {
+            Text("Quần què")
+        }
+        
+        Button {
+            print("Do something")
+        } label: {
+            Image("naruto")
+                .resizable()
+                .aspectRatio(contentMode: .fill) //fill image with button
+                .frame(width: 150, height: 150)
+                .clipped()
+                .cornerRadius(75)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 75)
+                                  .stroke(Color.red, lineWidth: 6)
+                }
+        }
+        .frame(width: 150, height: 150)  
+        .cornerRadius(25)
+        .background(.purple)
+    }
+}
+```
+
+Output:
+
+![](images/View-Controls/button.png)
+
+# V. NavigationLink
+
+A button that triggers a navigation presentation when pressed which is just like a `pushViewController` and it is the replacement in SwiftUI

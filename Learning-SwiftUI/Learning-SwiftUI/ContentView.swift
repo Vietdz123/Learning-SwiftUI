@@ -27,9 +27,39 @@ struct ContentView: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(50)
             .multilineTextAlignment(.center)
-        ArticleView()
-        SecurityFiled()
-        ImageView()
+//        ArticleView()
+//        SecurityFiled()
+//        ImageView()
+//        ButtonView()
+        
+    }
+}
+
+struct ButtonView: View {
+    var body: some View {
+        Button {
+            print("Siuuuuu")
+        } label: {
+            Text("Quần què")
+        }
+        
+        Button {
+            print("Do something")
+        } label: {
+            Image("naruto")
+                .resizable()
+                .aspectRatio(contentMode: .fill) //fill image with button
+                .frame(width: 150, height: 150)
+                .clipped()
+                .cornerRadius(75)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 75)
+                                  .stroke(Color.red, lineWidth: 6)
+                }
+        }
+        .frame(width: 150, height: 150)
+        .cornerRadius(25)
+        .background(.purple)
     }
 }
 
@@ -37,11 +67,12 @@ struct ImageView: View {
     var body: some View {
         Image("naruto")
             .resizable()
-//            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fit)
 //            .frame(width: 200, height: 200)
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 200, height: 200)
-            .background(.red)
+//            .aspectRatio(contentMode: .fill)
+//            .frame(width: 400, height: 400)
+//            .background(.orange)
+//            .scaleEffect(2)
             .border(.blue, width: 5)
 
             

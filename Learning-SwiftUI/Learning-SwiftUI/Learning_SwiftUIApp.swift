@@ -11,7 +11,12 @@ import SwiftUI
 struct Learning_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+//            VStackView()
+//            HStackView()
+//            ZStackView()
+//            ImageView()
+            ListView()
         }
     }
 }
