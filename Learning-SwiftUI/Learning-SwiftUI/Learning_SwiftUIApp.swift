@@ -16,7 +16,9 @@ struct Learning_SwiftUIApp: App {
 //            HStackView()
 //            ZStackView()
 //            ImageView()
-            ListView()
+//            ListView()
+//            SettingView()
+            ObservView()
         }
     }
 }

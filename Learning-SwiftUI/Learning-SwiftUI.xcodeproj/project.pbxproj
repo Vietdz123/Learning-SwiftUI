@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0D3EE52ADA364600433E59 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D3EE42ADA364600433E59 /* SettingView.swift */; };
+		5C0D3EE72ADA91F700433E59 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D3EE62ADA91F700433E59 /* StateView.swift */; };
 		5C5CF2FA2AD7DD770006D7B3 /* Learning_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CF2F92AD7DD770006D7B3 /* Learning_SwiftUIApp.swift */; };
 		5C5CF2FC2AD7DD770006D7B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CF2FB2AD7DD770006D7B3 /* ContentView.swift */; };
 		5C5CF2FE2AD7DD780006D7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C5CF2FD2AD7DD780006D7B3 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C0D3EE42ADA364600433E59 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		5C0D3EE62ADA91F700433E59 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		5C5CF2F62AD7DD770006D7B3 /* Learning-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5CF2F92AD7DD770006D7B3 /* Learning_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_SwiftUIApp.swift; sourceTree = "<group>"; };
 		5C5CF2FB2AD7DD770006D7B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0D3EE32ADA35FC00433E59 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C0D3EE42ADA364600433E59 /* SettingView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5C5CF2ED2AD7DD770006D7B3 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +69,12 @@
 		5C5CF2F82AD7DD770006D7B3 /* Learning-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5C0D3EE32ADA35FC00433E59 /* Controllers */,
 				5C5CF2F92AD7DD770006D7B3 /* Learning_SwiftUIApp.swift */,
 				5C5CF2FB2AD7DD770006D7B3 /* ContentView.swift */,
 				5CD96B082AD9969800355666 /* List.swift */,
 				5CD96B062AD945A800355666 /* Stacks.swift */,
+				5C0D3EE62ADA91F700433E59 /* StateView.swift */,
 				5CD96B042AD8FD6900355666 /* TestFile.swift */,
 				5C5CF2FD2AD7DD780006D7B3 /* Assets.xcassets */,
 				5C5CF2FF2AD7DD780006D7B3 /* Preview Content */,
@@ -147,8 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CD96B072AD945A800355666 /* Stacks.swift in Sources */,
+				5C0D3EE72ADA91F700433E59 /* StateView.swift in Sources */,
 				5CD96B052AD8FD6900355666 /* TestFile.swift in Sources */,
 				5C5CF2FC2AD7DD770006D7B3 /* ContentView.swift in Sources */,
+				5C0D3EE52ADA364600433E59 /* SettingView.swift in Sources */,
 				5CD96B092AD9969800355666 /* List.swift in Sources */,
 				5C5CF2FA2AD7DD770006D7B3 /* Learning_SwiftUIApp.swift in Sources */,
 			);
