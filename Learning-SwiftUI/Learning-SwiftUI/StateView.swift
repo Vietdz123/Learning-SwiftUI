@@ -28,11 +28,46 @@ struct ObservView: View {
     
     var body: some View {
         VStack(spacing: 30) {
-            SomethingView(viewModel: viewModel)
-            Text(viewModel.name)
+//            SomethingView(viewModel: viewModel)
+//            Text(viewModel.name)
+            StateObjectView()
+    
         }
-        
+    }
+}
 
-        
+// MARK: - StateObject
+class StateObjectClass: ObservableObject {
+   @Published var number: Int = 0
+}
+
+// MARK: - Phân biệt
+struct StateObjectView: View {
+    @StateObject var object = StateObjectClass()
+    
+    var body: some View {
+        VStack {
+            Text("number: \(object.number)")
+            Button("increment number") {
+                object.number += 1
+                print("number: \(object.number)")
+            }
+            
+            ObservedObjectView()
+        }
+    }
+}
+
+struct ObservedObjectView: View {
+    @ObservedObject var object = StateObjectClass()
+    
+    var body: some View {
+        VStack {
+            Text("number: \(object.number)")
+            Button("increment number") {
+                object.number += 1
+                print("number: \(object.number)")
+            }
+        }
     }
 }
