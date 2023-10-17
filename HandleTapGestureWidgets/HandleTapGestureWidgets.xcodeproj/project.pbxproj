@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04DAE6742ADE1EAF003B5EBC /* HandleTapGestureWidgetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE6732ADE1EAF003B5EBC /* HandleTapGestureWidgetsApp.swift */; };
+		04DAE6762ADE1EAF003B5EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE6752ADE1EAF003B5EBC /* ContentView.swift */; };
+		04DAE6782ADE1EB0003B5EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DAE6772ADE1EB0003B5EBC /* Assets.xcassets */; };
+		04DAE67B2ADE1EB0003B5EBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DAE67A2ADE1EB0003B5EBC /* Preview Assets.xcassets */; };
+		04DAE6882ADE1ED2003B5EBC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAE6872ADE1ED2003B5EBC /* WidgetKit.framework */; };
+		04DAE68A2ADE1ED2003B5EBC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAE6892ADE1ED2003B5EBC /* SwiftUI.framework */; };
+		04DAE68D2ADE1ED3003B5EBC /* ChangeColorWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE68C2ADE1ED3003B5EBC /* ChangeColorWidgetsBundle.swift */; };
+		04DAE68F2ADE1ED3003B5EBC /* ChangeColorWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE68E2ADE1ED3003B5EBC /* ChangeColorWidgetsLiveActivity.swift */; };
+		04DAE6912ADE1ED3003B5EBC /* ChangeColorWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE6902ADE1ED3003B5EBC /* ChangeColorWidgets.swift */; };
+		04DAE6932ADE1ED3003B5EBC /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE6922ADE1ED3003B5EBC /* AppIntent.swift */; };
+		04DAE6952ADE1ED9003B5EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DAE6942ADE1ED9003B5EBC /* Assets.xcassets */; };
+		04DAE6992ADE1ED9003B5EBC /* ChangeColorWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 04DAE6852ADE1ED2003B5EBC /* ChangeColorWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04DAE6972ADE1ED9003B5EBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04DAE6682ADE1EAF003B5EBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04DAE6842ADE1ED2003B5EBC;
+			remoteInfo = ChangeColorWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04DAE69D2ADE1ED9003B5EBC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04DAE6992ADE1ED9003B5EBC /* ChangeColorWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04DAE6702ADE1EAF003B5EBC /* HandleTapGestureWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandleTapGestureWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DAE6732ADE1EAF003B5EBC /* HandleTapGestureWidgetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTapGestureWidgetsApp.swift; sourceTree = "<group>"; };
+		04DAE6752ADE1EAF003B5EBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04DAE6772ADE1EB0003B5EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04DAE67A2ADE1EB0003B5EBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04DAE6852ADE1ED2003B5EBC /* ChangeColorWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChangeColorWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DAE6872ADE1ED2003B5EBC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		04DAE6892ADE1ED2003B5EBC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		04DAE68C2ADE1ED3003B5EBC /* ChangeColorWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorWidgetsBundle.swift; sourceTree = "<group>"; };
+		04DAE68E2ADE1ED3003B5EBC /* ChangeColorWidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorWidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		04DAE6902ADE1ED3003B5EBC /* ChangeColorWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColorWidgets.swift; sourceTree = "<group>"; };
+		04DAE6922ADE1ED3003B5EBC /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		04DAE6942ADE1ED9003B5EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04DAE6962ADE1ED9003B5EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04DAE66D2ADE1EAF003B5EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DAE6822ADE1ED2003B5EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAE68A2ADE1ED2003B5EBC /* SwiftUI.framework in Frameworks */,
+				04DAE6882ADE1ED2003B5EBC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04DAE6672ADE1EAF003B5EBC = {
+			isa = PBXGroup;
+			children = (
+				04DAE6722ADE1EAF003B5EBC /* HandleTapGestureWidgets */,
+				04DAE68B2ADE1ED3003B5EBC /* ChangeColorWidgets */,
+				04DAE6862ADE1ED2003B5EBC /* Frameworks */,
+				04DAE6712ADE1EAF003B5EBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04DAE6712ADE1EAF003B5EBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04DAE6702ADE1EAF003B5EBC /* HandleTapGestureWidgets.app */,
+				04DAE6852ADE1ED2003B5EBC /* ChangeColorWidgetsExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04DAE6722ADE1EAF003B5EBC /* HandleTapGestureWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				04DAE6732ADE1EAF003B5EBC /* HandleTapGestureWidgetsApp.swift */,
+				04DAE6752ADE1EAF003B5EBC /* ContentView.swift */,
+				04DAE6772ADE1EB0003B5EBC /* Assets.xcassets */,
+				04DAE6792ADE1EB0003B5EBC /* Preview Content */,
+			);
+			path = HandleTapGestureWidgets;
+			sourceTree = "<group>";
+		};
+		04DAE6792ADE1EB0003B5EBC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04DAE67A2ADE1EB0003B5EBC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04DAE6862ADE1ED2003B5EBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04DAE6872ADE1ED2003B5EBC /* WidgetKit.framework */,
+				04DAE6892ADE1ED2003B5EBC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04DAE68B2ADE1ED3003B5EBC /* ChangeColorWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				04DAE68C2ADE1ED3003B5EBC /* ChangeColorWidgetsBundle.swift */,
+				04DAE68E2ADE1ED3003B5EBC /* ChangeColorWidgetsLiveActivity.swift */,
+				04DAE6902ADE1ED3003B5EBC /* ChangeColorWidgets.swift */,
+				04DAE6922ADE1ED3003B5EBC /* AppIntent.swift */,
+				04DAE6942ADE1ED9003B5EBC /* Assets.xcassets */,
+				04DAE6962ADE1ED9003B5EBC /* Info.plist */,
+			);
+			path = ChangeColorWidgets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04DAE66F2ADE1EAF003B5EBC /* HandleTapGestureWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DAE67E2ADE1EB0003B5EBC /* Build configuration list for PBXNativeTarget "HandleTapGestureWidgets" */;
+			buildPhases = (
+				04DAE66C2ADE1EAF003B5EBC /* Sources */,
+				04DAE66D2ADE1EAF003B5EBC /* Frameworks */,
+				04DAE66E2ADE1EAF003B5EBC /* Resources */,
+				04DAE69D2ADE1ED9003B5EBC /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04DAE6982ADE1ED9003B5EBC /* PBXTargetDependency */,
+			);
+			name = HandleTapGestureWidgets;
+			productName = HandleTapGestureWidgets;
+			productReference = 04DAE6702ADE1EAF003B5EBC /* HandleTapGestureWidgets.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04DAE6842ADE1ED2003B5EBC /* ChangeColorWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DAE69A2ADE1ED9003B5EBC /* Build configuration list for PBXNativeTarget "ChangeColorWidgetsExtension" */;
+			buildPhases = (
+				04DAE6812ADE1ED2003B5EBC /* Sources */,
+				04DAE6822ADE1ED2003B5EBC /* Frameworks */,
+				04DAE6832ADE1ED2003B5EBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChangeColorWidgetsExtension;
+			productName = ChangeColorWidgetsExtension;
+			productReference = 04DAE6852ADE1ED2003B5EBC /* ChangeColorWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04DAE6682ADE1EAF003B5EBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					04DAE66F2ADE1EAF003B5EBC = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					04DAE6842ADE1ED2003B5EBC = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 04DAE66B2ADE1EAF003B5EBC /* Build configuration list for PBXProject "HandleTapGestureWidgets" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04DAE6672ADE1EAF003B5EBC;
+			productRefGroup = 04DAE6712ADE1EAF003B5EBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04DAE66F2ADE1EAF003B5EBC /* HandleTapGestureWidgets */,
+				04DAE6842ADE1ED2003B5EBC /* ChangeColorWidgetsExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04DAE66E2ADE1EAF003B5EBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAE67B2ADE1EB0003B5EBC /* Preview Assets.xcassets in Resources */,
+				04DAE6782ADE1EB0003B5EBC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DAE6832ADE1ED2003B5EBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAE6952ADE1ED9003B5EBC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04DAE66C2ADE1EAF003B5EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAE6762ADE1EAF003B5EBC /* ContentView.swift in Sources */,
+				04DAE6742ADE1EAF003B5EBC /* HandleTapGestureWidgetsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DAE6812ADE1ED2003B5EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAE68F2ADE1ED3003B5EBC /* ChangeColorWidgetsLiveActivity.swift in Sources */,
+				04DAE6932ADE1ED3003B5EBC /* AppIntent.swift in Sources */,
+				04DAE6912ADE1ED3003B5EBC /* ChangeColorWidgets.swift in Sources */,
+				04DAE68D2ADE1ED3003B5EBC /* ChangeColorWidgetsBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04DAE6982ADE1ED9003B5EBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04DAE6842ADE1ED2003B5EBC /* ChangeColorWidgetsExtension */;
+			targetProxy = 04DAE6972ADE1ED9003B5EBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04DAE67C2ADE1EB0003B5EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04DAE67D2ADE1EB0003B5EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04DAE67F2ADE1EB0003B5EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HandleTapGestureWidgets/Preview Content\"";
+				DEVELOPMENT_TEAM = AL5596JXF3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.HandleTapGestureWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04DAE6802ADE1EB0003B5EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HandleTapGestureWidgets/Preview Content\"";
+				DEVELOPMENT_TEAM = AL5596JXF3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.HandleTapGestureWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04DAE69B2ADE1ED9003B5EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AL5596JXF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChangeColorWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChangeColorWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.HandleTapGestureWidgets.ChangeColorWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04DAE69C2ADE1ED9003B5EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AL5596JXF3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChangeColorWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChangeColorWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.HandleTapGestureWidgets.ChangeColorWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04DAE66B2ADE1EAF003B5EBC /* Build configuration list for PBXProject "HandleTapGestureWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DAE67C2ADE1EB0003B5EBC /* Debug */,
+				04DAE67D2ADE1EB0003B5EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DAE67E2ADE1EB0003B5EBC /* Build configuration list for PBXNativeTarget "HandleTapGestureWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DAE67F2ADE1EB0003B5EBC /* Debug */,
+				04DAE6802ADE1EB0003B5EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DAE69A2ADE1ED9003B5EBC /* Build configuration list for PBXNativeTarget "ChangeColorWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DAE69B2ADE1ED9003B5EBC /* Debug */,
+				04DAE69C2ADE1ED9003B5EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04DAE6682ADE1EAF003B5EBC /* Project object */;
+}
