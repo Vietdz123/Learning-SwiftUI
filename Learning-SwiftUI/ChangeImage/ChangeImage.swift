@@ -11,18 +11,18 @@ import SwiftUI
 struct BackgroundEntry: TimelineEntry {
     let date: Date = .now
     let size: CGSize
-//    let backgroundModel: BackgroundModel  
+    let backgroundModel: BgColor
 }
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> BackgroundEntry {
-        let entry = BackgroundEntry(size: context.displaySize)
+        let entry = BackgroundEntry(size: context.displaySize, backgroundModel: .blue)
         
         return entry
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> BackgroundEntry {
-        let entry = BackgroundEntry(size: context.displaySize)
+        let entry = BackgroundEntry(size: context.displaySize, backgroundModel: .blue)
         
         return entry
     }
@@ -34,10 +34,10 @@ struct Provider: AppIntentTimelineProvider {
         }
         
         let image = BackgroudDataModel.shared.image
-        let entry = BackgroundEntry(size: context.displaySize)
+        let entry = BackgroundEntry(size: context.displaySize, backgroundModel: .blue)
         
         print("DEBUG: siuuu")
-        return Timeline(entries: [entry], policy: .atEnd)
+        return Timeline(entries: [entry], policy: .never)
     }
 }
 
@@ -47,18 +47,21 @@ struct ChangeImageEntryView : View {
     
     var body: some View {
         VStack {
-            Button(intent: ChangeBackgroundIntent()) {
-                Image("luffy")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: entry.size.width, height: entry.size.height)
-            }.background {
-                Image(isLuffy ? "luffy" : "Luffy1")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: entry.size.width, height: entry.size.height)
-            }
+//            Button(intent: ChangeBackgroundIntent()) {
+//                //                Image("luffy")
+//                //                    .resizable()
+//                //                    .scaledToFill()
+//                //                    .frame(width: entry.size.width, height: entry.size.height)
+//                Text("Siuu")
+//            }
         }
+        .background {
+            entry.backgroundModel.color
+                .resizable()
+                .scaledToFill()
+                .frame(width: entry.size.width, height: entry.size.height)
+        }
+
     }
 }
 

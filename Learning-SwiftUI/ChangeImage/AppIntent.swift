@@ -16,6 +16,9 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     // An example configurable parameter.
     @Parameter(title: "Favorite Emoji", default: "😃")
     var favoriteEmoji: String
+    
+    @Parameter(title: "Backgroud color", default: BgColor.blue)
+    var backgroudColor: BgColor
 }
 
 
@@ -28,6 +31,8 @@ struct ChangeBackgroundIntent: AppIntent {
     @Parameter(title: "Image ID")
     var id: String
     
+
+    
     
     init(id: String) {
         self.id = id
@@ -37,11 +42,32 @@ struct ChangeBackgroundIntent: AppIntent {
     
     func perform() async throws -> some IntentResult & ReturnsValue {
         
-  
-        
+
         return .result()
     }
 }
+
+enum BgColor: String, CaseIterable, AppEnum {
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "TypeDisplayRepresentation BgColor"
+    
+    static var caseDisplayRepresentations: [BgColor : DisplayRepresentation] = [
+        .blue: "luffy",
+        .green: "naruto",
+        .red: "sasuke",
+        .orange: "sakura"
+    ]
+    
+    case blue = "luffy"
+    case green = "naruto"
+    case red = "sasuke"
+    case orange = "sakura"
+    
+    var color: Image {
+        print("DEBUG: \(self.rawValue) qqq")
+        return Image(self.rawValue)
+    }
+}
+
 
 struct BackgroundModel: Identifiable {
     var id = UUID().uuidString
