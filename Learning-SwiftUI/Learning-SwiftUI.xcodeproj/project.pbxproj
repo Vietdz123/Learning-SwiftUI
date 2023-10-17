@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042304F12ADE85DE00F55405 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA0AB32ADE7C5600A644DF /* FileService.swift */; };
+		04EA0A9D2ADE7AE200A644DF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA0A9C2ADE7AE200A644DF /* WidgetKit.framework */; };
+		04EA0A9F2ADE7AE200A644DF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA0A9E2ADE7AE200A644DF /* SwiftUI.framework */; };
+		04EA0AA22ADE7AE200A644DF /* ChangeImageBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA0AA12ADE7AE200A644DF /* ChangeImageBundle.swift */; };
+		04EA0AA42ADE7AE200A644DF /* ChangeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA0AA32ADE7AE200A644DF /* ChangeImage.swift */; };
+		04EA0AA62ADE7AE200A644DF /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA0AA52ADE7AE200A644DF /* AppIntent.swift */; };
+		04EA0AA82ADE7AE400A644DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EA0AA72ADE7AE400A644DF /* Assets.xcassets */; };
+		04EA0AAC2ADE7AE400A644DF /* ChangeImageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 04EA0A9A2ADE7AE200A644DF /* ChangeImageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04EA0AB62ADE7DB300A644DF /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA0AB32ADE7C5600A644DF /* FileService.swift */; };
 		5C0D3EE52ADA364600433E59 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D3EE42ADA364600433E59 /* SettingView.swift */; };
 		5C0D3EE72ADA91F700433E59 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D3EE62ADA91F700433E59 /* StateView.swift */; };
 		5C5CF2FA2AD7DD770006D7B3 /* Learning_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CF2F92AD7DD770006D7B3 /* Learning_SwiftUIApp.swift */; };
@@ -18,7 +27,40 @@
 		5CD96B092AD9969800355666 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD96B082AD9969800355666 /* List.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		04EA0AAA2ADE7AE400A644DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C5CF2EE2AD7DD770006D7B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04EA0A992ADE7AE200A644DF;
+			remoteInfo = ChangeImageExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04EA0AAD2ADE7AE400A644DF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04EA0AAC2ADE7AE400A644DF /* ChangeImageExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		04EA0A9A2ADE7AE200A644DF /* ChangeImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChangeImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EA0A9C2ADE7AE200A644DF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		04EA0A9E2ADE7AE200A644DF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		04EA0AA12ADE7AE200A644DF /* ChangeImageBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeImageBundle.swift; sourceTree = "<group>"; };
+		04EA0AA32ADE7AE200A644DF /* ChangeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeImage.swift; sourceTree = "<group>"; };
+		04EA0AA52ADE7AE200A644DF /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		04EA0AA72ADE7AE400A644DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04EA0AA92ADE7AE400A644DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EA0AB32ADE7C5600A644DF /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		5C0D3EE42ADA364600433E59 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		5C0D3EE62ADA91F700433E59 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		5C5CF2F62AD7DD770006D7B3 /* Learning-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +74,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04EA0A972ADE7AE200A644DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EA0A9F2ADE7AE200A644DF /* SwiftUI.framework in Frameworks */,
+				04EA0A9D2ADE7AE200A644DF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C5CF2F32AD7DD770006D7B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,6 +93,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04EA0A9B2ADE7AE200A644DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04EA0A9C2ADE7AE200A644DF /* WidgetKit.framework */,
+				04EA0A9E2ADE7AE200A644DF /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04EA0AA02ADE7AE200A644DF /* ChangeImage */ = {
+			isa = PBXGroup;
+			children = (
+				04EA0AA12ADE7AE200A644DF /* ChangeImageBundle.swift */,
+				04EA0AA32ADE7AE200A644DF /* ChangeImage.swift */,
+				04EA0AA52ADE7AE200A644DF /* AppIntent.swift */,
+				04EA0AA72ADE7AE400A644DF /* Assets.xcassets */,
+				04EA0AA92ADE7AE400A644DF /* Info.plist */,
+			);
+			path = ChangeImage;
+			sourceTree = "<group>";
+		};
 		5C0D3EE32ADA35FC00433E59 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				5C5CF2F82AD7DD770006D7B3 /* Learning-SwiftUI */,
+				04EA0AA02ADE7AE200A644DF /* ChangeImage */,
+				04EA0A9B2ADE7AE200A644DF /* Frameworks */,
 				5C5CF2F72AD7DD770006D7B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				5C5CF2F62AD7DD770006D7B3 /* Learning-SwiftUI.app */,
+				04EA0A9A2ADE7AE200A644DF /* ChangeImageExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +153,7 @@
 				5CD96B042AD8FD6900355666 /* TestFile.swift */,
 				5C5CF2FD2AD7DD780006D7B3 /* Assets.xcassets */,
 				5C5CF2FF2AD7DD780006D7B3 /* Preview Content */,
+				04EA0AB32ADE7C5600A644DF /* FileService.swift */,
 			);
 			path = "Learning-SwiftUI";
 			sourceTree = "<group>";
@@ -93,6 +169,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		04EA0A992ADE7AE200A644DF /* ChangeImageExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EA0AB02ADE7AE400A644DF /* Build configuration list for PBXNativeTarget "ChangeImageExtension" */;
+			buildPhases = (
+				04EA0A962ADE7AE200A644DF /* Sources */,
+				04EA0A972ADE7AE200A644DF /* Frameworks */,
+				04EA0A982ADE7AE200A644DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChangeImageExtension;
+			productName = ChangeImageExtension;
+			productReference = 04EA0A9A2ADE7AE200A644DF /* ChangeImageExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5C5CF2F52AD7DD770006D7B3 /* Learning-SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C5CF3042AD7DD780006D7B3 /* Build configuration list for PBXNativeTarget "Learning-SwiftUI" */;
@@ -100,10 +193,12 @@
 				5C5CF2F22AD7DD770006D7B3 /* Sources */,
 				5C5CF2F32AD7DD770006D7B3 /* Frameworks */,
 				5C5CF2F42AD7DD770006D7B3 /* Resources */,
+				04EA0AAD2ADE7AE400A644DF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04EA0AAB2ADE7AE400A644DF /* PBXTargetDependency */,
 			);
 			name = "Learning-SwiftUI";
 			productName = "Learning-SwiftUI";
@@ -117,9 +212,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					04EA0A992ADE7AE200A644DF = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					5C5CF2F52AD7DD770006D7B3 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -139,11 +237,20 @@
 			projectRoot = "";
 			targets = (
 				5C5CF2F52AD7DD770006D7B3 /* Learning-SwiftUI */,
+				04EA0A992ADE7AE200A644DF /* ChangeImageExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04EA0A982ADE7AE200A644DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EA0AA82ADE7AE400A644DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C5CF2F42AD7DD770006D7B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +263,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04EA0A962ADE7AE200A644DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EA0AA22ADE7AE200A644DF /* ChangeImageBundle.swift in Sources */,
+				04EA0AA42ADE7AE200A644DF /* ChangeImage.swift in Sources */,
+				04EA0AA62ADE7AE200A644DF /* AppIntent.swift in Sources */,
+				042304F12ADE85DE00F55405 /* FileService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C5CF2F22AD7DD770006D7B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +283,7 @@
 				5CD96B052AD8FD6900355666 /* TestFile.swift in Sources */,
 				5C5CF2FC2AD7DD770006D7B3 /* ContentView.swift in Sources */,
 				5C0D3EE52ADA364600433E59 /* SettingView.swift in Sources */,
+				04EA0AB62ADE7DB300A644DF /* FileService.swift in Sources */,
 				5CD96B092AD9969800355666 /* List.swift in Sources */,
 				5C5CF2FA2AD7DD770006D7B3 /* Learning_SwiftUIApp.swift in Sources */,
 			);
@@ -172,7 +291,80 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		04EA0AAB2ADE7AE400A644DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04EA0A992ADE7AE200A644DF /* ChangeImageExtension */;
+			targetProxy = 04EA0AAA2ADE7AE400A644DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		04EA0AAE2ADE7AE400A644DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AL5596JXF3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChangeImage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChangeImage;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tienviet.Learning-SwiftUI.ChangeImage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04EA0AAF2ADE7AE400A644DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AL5596JXF3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChangeImage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChangeImage;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tienviet.Learning-SwiftUI.ChangeImage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5C5CF3022AD7DD780006D7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -290,6 +482,7 @@
 		5C5CF3052AD7DD780006D7B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +512,7 @@
 		5C5CF3062AD7DD780006D7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +542,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04EA0AB02ADE7AE400A644DF /* Build configuration list for PBXNativeTarget "ChangeImageExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04EA0AAE2ADE7AE400A644DF /* Debug */,
+				04EA0AAF2ADE7AE400A644DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5C5CF2F12AD7DD770006D7B3 /* Build configuration list for PBXProject "Learning-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,6 +1,6 @@
 //
-//  ChangeColorWidgetsLiveActivity.swift
-//  ChangeColorWidgets
+//  TaskCheckListLiveActivity.swift
+//  TaskCheckList
 //
 //  Created by MAC on 17/10/2023.
 //
@@ -9,7 +9,7 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct ChangeColorWidgetsAttributes: ActivityAttributes {
+struct TaskCheckListAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
         var emoji: String
@@ -19,9 +19,9 @@ struct ChangeColorWidgetsAttributes: ActivityAttributes {
     var name: String
 }
 
-struct ChangeColorWidgetsLiveActivity: Widget {
+struct TaskCheckListLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: ChangeColorWidgetsAttributes.self) { context in
+        ActivityConfiguration(for: TaskCheckListAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
                 Text("Hello \(context.state.emoji)")
@@ -56,25 +56,25 @@ struct ChangeColorWidgetsLiveActivity: Widget {
     }
 }
 
-extension ChangeColorWidgetsAttributes {
-    fileprivate static var preview: ChangeColorWidgetsAttributes {
-        ChangeColorWidgetsAttributes(name: "World")
+extension TaskCheckListAttributes {
+    fileprivate static var preview: TaskCheckListAttributes {
+        TaskCheckListAttributes(name: "World")
     }
 }
 
-extension ChangeColorWidgetsAttributes.ContentState {
-    fileprivate static var smiley: ChangeColorWidgetsAttributes.ContentState {
-        ChangeColorWidgetsAttributes.ContentState(emoji: "😀")
+extension TaskCheckListAttributes.ContentState {
+    fileprivate static var smiley: TaskCheckListAttributes.ContentState {
+        TaskCheckListAttributes.ContentState(emoji: "😀")
      }
      
-     fileprivate static var starEyes: ChangeColorWidgetsAttributes.ContentState {
-         ChangeColorWidgetsAttributes.ContentState(emoji: "🤩")
+     fileprivate static var starEyes: TaskCheckListAttributes.ContentState {
+         TaskCheckListAttributes.ContentState(emoji: "🤩")
      }
 }
 
-#Preview("Notification", as: .content, using: ChangeColorWidgetsAttributes.preview) {
-   ChangeColorWidgetsLiveActivity()
+#Preview("Notification", as: .content, using: TaskCheckListAttributes.preview) {
+   TaskCheckListLiveActivity()
 } contentStates: {
-    ChangeColorWidgetsAttributes.ContentState.smiley
-    ChangeColorWidgetsAttributes.ContentState.starEyes
+    TaskCheckListAttributes.ContentState.smiley
+    TaskCheckListAttributes.ContentState.starEyes
 }

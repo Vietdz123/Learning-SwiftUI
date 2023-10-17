@@ -9,10 +9,43 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>ChangeImageExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>HandleTapGestureWidgets.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TaskCheckListExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>04D6AA922ADE75A7006E1B63</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04DAE66F2ADE1EAF003B5EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04DAE6842ADE1ED2003B5EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04DAE6A12ADE4119003B5EBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

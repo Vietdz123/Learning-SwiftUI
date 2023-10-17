@@ -23,14 +23,11 @@ struct ArticleView: View {
 struct ContentView: View {
     @State var tName : String = "SwiftUI - TextField"
     var body: some View {
-        TextField("Placeholder", text: $tName)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding(50)
-            .multilineTextAlignment(.center)
-//        ArticleView()
-//        SecurityFiled()
-//        ImageView()
-//        ButtonView()
+        Text("Hello")
+            .onAppear(perform: {
+            FileService.shared.writeToSource(with: "luffy1")
+            FileService.shared.writeToSource(with: "luffy")
+        })
         
     }
 }
