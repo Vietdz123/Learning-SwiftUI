@@ -122,8 +122,4 @@ struct CharacterDetailProvider: AppIntentTimelineProvider {
 }
 ```
 
-
-
-
-
 # IV. Reference
