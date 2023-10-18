@@ -100,6 +100,48 @@ struct ImageQuery: EntityQuery {
 
 ![](widgets/all_suggest.png)
 
-- `defaultResult`: Nó sẽ return default. cái này thi ko cần quan tâm
-- `entities`: Thằng này sẽ là return thằng đang được chọn hiện tại. // not sure
+- `defaultResult`: Nó sẽ return default, cái này thi ko cần quan tâm
+- `entities`: Hiện tại thì khi ta nhấn vào các option suggest, nó trả về cho ta duy nhất 1 `ID` mà tương ứng với option ta nhấn vào. Nhiệm vụ của ta là return cho nó 1 mảng Object mà trong mảng đó có phần tử có ID trùng với ID `entities` nó truyền vào là được.
 
+```swift
+struct ImageQuery: EntityQuery {
+    
+    func entities(for identifiers: [ImageSource.ID]) async throws -> [ImageSource] {
+        print("DEBUG: \(identifiers.first?.entityIdentifierString) and \(identifiers.count)")
+//        identifiers.forEach { id in
+//            print("DEBUG: \(id) siuu")
+//        }
+//        `
+        var a = ImageSource.allImage.filter { imageSource in
+            return identifiers.contains(imageSource.id)
+        }
+//        
+//        print("DEBUG: \(a.count) and \(a.first?.id)")
+        return [ImageSource(id: ImageType.anya.rawValue, image: .luffy), ImageSource(id: ImageType.sasuke.rawValue, image: .sasuke)]
+        return a
+//        return ImageSource.allImage
+    }
+    
+    func suggestedEntities() async throws -> [ImageSource] {
+        ImageType.allCases.map { image in
+            return ImageSource(id: image.rawValue, image: image)
+        }
+    }
+    
+    func defaultResult() async -> ImageSource? {
+        try? await suggestedEntities().first
+    }
+}
+```
+
+- Đầu tiên ta thấy hàm `suggestedEntities` show cho user các lựa chọn, tên của các lựa chọn đó được hiển thị thông qua thuộc tính `displayRepresentation` của `imageSource`, ở đây ta sẽ hiển thị các lựa chọn thông qua `id`.
+
+```swift
+var displayRepresentation: DisplayRepresentation {
+    DisplayRepresentation(title: "\(id)")
+}
+```
+
+- Thứ 2 ta phải hiển rằng cái quan trọng ở đây là `id`, những cái khác ko quan trọng ok. Vẫn ở `suggestedEntities`, ta return lại tập hợp các giá trị của `ImageSource` và hiển thị lựa chọn. Cái này thì ko đáng nói, cái đáng nói ở đây là cái gì thực sự được hiển thị. Cái được hiển thị ở đây là `displayRepresentation`, và `displayRepresentation` được đính với `id` ta truyền cho nó khi khởi tạo Object `ImageSource`. Lúc này tương ứng với mỗi `displayRepresentation` được đính với `id`, các thuộc tính khác như `image` hay `qq` nó chỉ là rác, ta khởi tạo nó để return thôi.
+- Thứ 3, khi user tích vào option hiển thị (`từ bước 2 ta thấy rằng mỗi option đã đính với 1 id`), thì khi user tích vào option đó, thì tương ứng với việc ta sẽ pass `id` đó vào hàm `entities`, `nhiệm vụ lúc này của ta, là return lại 1 mảng đối tượng ImageSource, trong đó có 1 đối tượng có id trùng với id mà entities pass vào là được`. 
+- Thứ 4, sau khi ta return lại 1 mảng `imageSource`, lúc này khi user thoát ra phần `edit Widget`, `Widget` sẽ tự động được render lại và nó sẽ gọi tới hàm `timeline` của `Provider`, lúc này ta sẽ lấy `imageSource` mới từ parameter `configuration` thuộc kiểu `ConfigurationAppIntent`.
