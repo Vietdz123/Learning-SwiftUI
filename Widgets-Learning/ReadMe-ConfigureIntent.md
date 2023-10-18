@@ -71,12 +71,27 @@ struct ExportAllTransactionsIntent: AppIntent {
     
     static var description =
         IntentDescription("Exports your transaction history as CSV data.")
+
+    @Parameter(title: "Date")
+    var date: Date?
 }
 ```
 
-## 2.2 Specify the input your intent requires
+## 2.2 Perform the action for your intentin page link
 
-Nếu `intent` của chúng ta mà cần sử dụng 1 external input, ta sẽ thêm parameter vào intent struct để thông báo cho system. Để khai báo 1 paramert trong struct intent, ta sẽ chú thích nó với `@Parameter` wrapper, cung cấp `title` đễ nhận dạng nó trong `Shortcuts app`
+Để cung cấp tình năng cho `intent`, ta sẽ triển khai phương thức `perform()`. Hệ thống sẽ gọi tới function này.
+
+```swift
+func perform() async throws -> some IntentResult & ReturnsValue {
+    let transactions = try await BudgetManager.shared
+        .prepareExportOfTransactions(after: date, for: merchant)
+        
+    return .result(value: transactions)
+}
+```
+
+
+
 
 # III. Reference
 

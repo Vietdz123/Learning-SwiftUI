@@ -27,7 +27,7 @@ struct WidgetLuffy: Widget {
 - `intent`: Đây là 1 struct comform với protocol `WidgetConfigurationIntent`, có nhiệm vụ chính là cung cấp các action cho phần `EditWidget`
 - `Provider`: Đây là 1 struct comform với protocol `AppIntentTimelineProvider`, có nhiệm vụ chính là cung cấp `timeline` và dữ liệu `entry` tới `View`. Bên cạnh đó, nó cũng sẽ được sử dụng để khi `edit intent`, mỗi khi `edit widget`, nó sẽ gọi method `timeline` của `provider`.
 
-# 1.1 Intent
+# II. Intent
 
 Như đã nói `intent`: Đây là 1 struct comform với protocol `WidgetConfigurationIntent`, có nhiệm vụ chính là cung cấp các action cho phần `EditWidget`. Ta sử dụng thằng `AppIntent` hầu như cho việc `Edit Widget`.
 
@@ -142,6 +142,46 @@ var displayRepresentation: DisplayRepresentation {
 }
 ```
 
-- Thứ 2 ta phải hiển rằng cái quan trọng ở đây là `id`, những cái khác ko quan trọng ok. Vẫn ở `suggestedEntities`, ta return lại tập hợp các giá trị của `ImageSource` và hiển thị lựa chọn. Cái này thì ko đáng nói, cái đáng nói ở đây là cái gì thực sự được hiển thị. Cái được hiển thị ở đây là `displayRepresentation`, và `displayRepresentation` được đính với `id` ta truyền cho nó khi khởi tạo Object `ImageSource`. Lúc này tương ứng với mỗi `displayRepresentation` được đính với `id`, các thuộc tính khác như `image` hay `qq` nó chỉ là rác, ta khởi tạo nó để return thôi.
+- Thứ 2, ta phải hiển rằng cái quan trọng ở đây là `id`, những cái khác ko quan trọng ok. Vẫn ở `suggestedEntities`, ta return lại tập hợp các giá trị của `ImageSource` và hiển thị lựa chọn. Cái này thì ko đáng nói, cái đáng nói ở đây là cái gì thực sự được hiển thị. Cái được hiển thị ở đây là `displayRepresentation`, và `displayRepresentation` được đính với `id` ta truyền cho nó khi khởi tạo Object `ImageSource`. Lúc này tương ứng với mỗi `displayRepresentation` được đính với `id`, các thuộc tính khác như `image` hay `qq` nó chỉ là rác, ta khởi tạo nó để return thôi.
 - Thứ 3, khi user tích vào option hiển thị (`từ bước 2 ta thấy rằng mỗi option đã đính với 1 id`), thì khi user tích vào option đó, thì tương ứng với việc ta sẽ pass `id` đó vào hàm `entities`, `nhiệm vụ lúc này của ta, là return lại 1 mảng đối tượng ImageSource, trong đó có 1 đối tượng có id trùng với id mà entities pass vào là được`. 
 - Thứ 4, sau khi ta return lại 1 mảng `imageSource`, lúc này khi user thoát ra phần `edit Widget`, `Widget` sẽ tự động được render lại và nó sẽ gọi tới hàm `timeline` của `Provider`, lúc này ta sẽ lấy `imageSource` mới từ parameter `configuration` thuộc kiểu `ConfigurationAppIntent`.
+
+
+# III. AppIntent - Interact Button with Widget
+
+Để cho user tương tác được với view trên widget, ta được Apple cung cấp `Button(intent: <AppIntent>, label: <View>)`. Ở đây ta cần truyền 1 struct comforn với kiểu `AppIntent`. Ở `AppIntent` ta sẽ triển khai function `perform`, mỗi khi người dùng click vào Button, hệ thống sẽ gọi tới function `perform`. Nhiệm vụ chính của ta là triển khai function `perform()` cho thích hợp.
+
+```swift
+struct ToggleStateIntent: AppIntent {
+    
+    init() {
+        
+    }
+    
+    static var title: LocalizedStringResource = "Toggle Task Stage"
+    
+    @Parameter(title: "Task ID")
+    var id: String
+    
+    init(id: String) {
+        self.id = id
+    }
+    
+    func perform() async throws -> some IntentResult & ReturnsValue {
+        if let index = TaskDataModel.shared.task.firstIndex(where: { task in
+            return task.id == self.id
+        }) {
+            TaskDataModel.shared.task[index].completed.toggle()
+        }
+        
+        
+        
+        return .result()
+    }
+}
+
+Button(intent: ToggleStateIntent(id: task.id)) {
+    Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
+        .foregroundColor(.blue)
+}
+```
