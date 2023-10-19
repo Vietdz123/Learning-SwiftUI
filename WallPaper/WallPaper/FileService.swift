@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Constant {
     static let groupConstant = "group.demo.WallPaper"
+    static let imagePlacehodel = "placeHodel"
 }
 
 class FileService {
@@ -17,19 +18,21 @@ class FileService {
     
     static func relativePath(with nameFolder: String) -> URL? {
 //        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Image-Folder")
-        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constant.groupConstant)?.appendingPathComponent(nameFolder)
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constant.groupConstant)?.appendingPathComponent("Image-Folder").appendingPathComponent(nameFolder)
     }
     
-    static var relativePath: URL? {
-        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constant.groupConstant)
+     var relativePath: URL? {
+         return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Constant.groupConstant)?.appendingPathComponent("Image-Folder")
     }
     
-    static func getAllFolder() -> [String] {
-        guard let folder = FileService.relativePath else {return []}
-        guard let urls = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil) else {return []}
-        
-        return urls.map { url in
-            return url.absoluteString
+     func getAllFolder() -> [String] {
+        guard let folder = relativePath else {return []}
+         guard let urls = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil) else {return []}
+         print("DEBUG: \(urls[0].absoluteString)")
+         return urls.filter({ url in
+             return !url.absoluteString.contains(".")
+         }).map { url in
+            return url.deletingPathExtension().lastPathComponent
         }
     }
     
@@ -39,7 +42,7 @@ class FileService {
         if !FileManager.default.fileExists(atPath: FileService.relativePath(with: nameFolder)?.path ?? "") {
             try? FileManager.default.createDirectory(at: FileService.relativePath(with: nameFolder)!, withIntermediateDirectories: false)
         }
-        guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent(nameFolder).appendingPathComponent("\(imageName).jpeg") else {return}
+        guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent("\(imageName).jpeg") else {return}
 
         FileManager.default.createFile(atPath: folder.pathExtension, contents: nil)
         
@@ -50,7 +53,7 @@ class FileService {
     }
     
     func readAllImages(from nameFolder: String) -> [UIImage] {
-        guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent(nameFolder) else {return []}
+        guard let folder = FileService.relativePath(with: nameFolder) else {return []}
         let urls = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)
         
         var images: [UIImage] = []

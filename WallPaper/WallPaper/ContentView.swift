@@ -30,6 +30,10 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
+            FileService.shared.writeToSource(with: "anya", with: "Anime")
+            FileService.shared.writeToSource(with: "sasuke", with: "Anime")
+            FileService.shared.writeToSource(with: "luffy", with: "Shippuden")
+            FileService.shared.writeToSource(with: "placeHodel", with: "Shippuden")
 //            FileService.shared.writeToSource(with: "anya")
 //            FileService.shared.writeToSource(with: "luffy")
 //            FileService.shared.writeToSource(with: "sasuke")

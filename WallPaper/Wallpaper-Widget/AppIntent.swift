@@ -19,11 +19,12 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     
     func perform() async throws -> some IntentResult {
             
-        imageSrc = ImageSource(id: "anya", image: UIImage(named: "placeHodel")!)
+        ImageDataModel.shared.updateCurrentIndex() 
         
         return .result()
     }
 }
+
 
 
 struct ImageSource: AppEntity {
@@ -32,15 +33,14 @@ struct ImageSource: AppEntity {
     
     static var defaultQuery: ImageQuery = ImageQuery()   //EntityQuery
         
-    var image: UIImage
+    var name: String
+    var images: [UIImage] {
+        FileService.shared.readAllImages(from: self.name)
+    }
     
     static func getAllSource() -> [ImageSource] {
-        return FileService.shared.readAllImageUrls().map { url in
-            let data = try? Data(contentsOf: url)
-            let image = UIImage(data: data ?? Data()) ?? UIImage(named: "placeHodel")!
-            return ImageSource(id: url.deletingPathExtension().lastPathComponent, image: image)
-        }.filter { imgSrc in
-            return imgSrc.id != "placeHodel"
+        return FileService.shared.getAllFolder().map { name in
+            return ImageSource(id: name, name: name)
         }
     }
     

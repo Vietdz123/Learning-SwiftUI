@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SourceImageEntry {
-        SourceImageEntry(sourceImage: ImageSource(id: "luffy", image: UIImage(named: "placeHodel")!), size: context.displaySize)
+        SourceImageEntry(sourceImage: ImageSource(id: "luffy", name: Constant.imagePlacehodel), size: context.displaySize)
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SourceImageEntry {
@@ -19,6 +19,8 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SourceImageEntry> {
+        
+        ImageDataModel.shared.images = configuration.imageSrc.images
 
         let entry = SourceImageEntry(sourceImage: configuration.imageSrc, size: context.displaySize)
         
@@ -35,11 +37,10 @@ struct SourceImageEntry: TimelineEntry {
 struct WallpaperWidgetEntryView : View {
     
     var entry: Provider.Entry
-    @State var imgSrc: ImageSource = ImageSource(id: "anya", image: UIImage(named: "placeHodel")!)
     
     var body: some View {
         ZStack {
-            Image(uiImage: imgSrc.image)
+            Image(uiImage: ImageDataModel.shared.currentImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
@@ -51,8 +52,6 @@ struct WallpaperWidgetEntryView : View {
                     .background(Color.clear)
                     
             }.buttonStyle(.plain)
-        }.onAppear {
-            imgSrc = entry.sourceImage
         }
 
     }
