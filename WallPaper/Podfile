@@ -1,0 +1,15 @@
+
+
+def shared_pods
+	pod 'RealmSwift' 
+end
+
+target 'WallPaper' do
+	shared_pods
+
+end
+
+target 'Wallpaper-WidgetExtension' do
+	shared_pods
+
+end
