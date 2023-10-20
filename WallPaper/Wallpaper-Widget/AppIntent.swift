@@ -58,8 +58,8 @@ struct ImageQuery: EntityQuery {
 //            return identifiers.contains(imageModel.id)
 //        }
         
-//        return ImageSource.getAllSource()
-        return []
+        return ImageSource.getAllSource()
+//        return []
     }	
     
     func suggestedEntities() async throws -> [ImageSource] {

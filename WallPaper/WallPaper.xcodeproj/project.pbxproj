@@ -21,6 +21,8 @@
 		047858AE2AE0ED590072D7BB /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858AD2AE0ED590072D7BB /* FileService.swift */; };
 		047858AF2AE0ED960072D7BB /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858AD2AE0ED590072D7BB /* FileService.swift */; };
 		047858B52AE11CEE0072D7BB /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858B32AE11CEB0072D7BB /* ImageDataModel.swift */; };
+		04D502242AE2294600EE1C81 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502232AE2294600EE1C81 /* SwiftUIView.swift */; };
+		04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502252AE22B3200EE1C81 /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		047858B02AE105FC0072D7BB /* WallPaper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WallPaper.entitlements; sourceTree = "<group>"; };
 		047858B12AE1075A0072D7BB /* Wallpaper-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wallpaper-WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		047858B32AE11CEB0072D7BB /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
+		04D502232AE2294600EE1C81 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		04D502252AE22B3200EE1C81 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 			children = (
 				047858B02AE105FC0072D7BB /* WallPaper.entitlements */,
 				047858842AE0EC1E0072D7BB /* WallPaperApp.swift */,
+				04D502232AE2294600EE1C81 /* SwiftUIView.swift */,
 				047858862AE0EC1E0072D7BB /* ContentView.swift */,
+				04D502252AE22B3200EE1C81 /* WeatherView.swift */,
 				047858AD2AE0ED590072D7BB /* FileService.swift */,
 				047858882AE0EC200072D7BB /* Assets.xcassets */,
 				0478588A2AE0EC200072D7BB /* Preview Content */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */,
 				047858872AE0EC1E0072D7BB /* ContentView.swift in Sources */,
 				047858852AE0EC1E0072D7BB /* WallPaperApp.swift in Sources */,
+				04D502242AE2294600EE1C81 /* SwiftUIView.swift in Sources */,
 				047858AE2AE0ED590072D7BB /* FileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
