@@ -54,10 +54,13 @@ struct ImageSource: AppEntity {
 struct ImageQuery: EntityQuery {
     
     func entities(for identifiers: [ImageSource.ID]) async throws -> [ImageSource] {
-        return ImageSource.getAllSource().filter { imageModel in
-            return identifiers.contains(imageModel.id)
-        }
-    }
+//        return ImageSource.getAllSource().filter { imageModel in
+//            return identifiers.contains(imageModel.id)
+//        }
+        
+//        return ImageSource.getAllSource()
+        return []
+    }	
     
     func suggestedEntities() async throws -> [ImageSource] {
         return ImageSource.getAllSource()

@@ -39,9 +39,16 @@ class FileService {
     func writeToSource(with imageName: String, with nameFolder: String) {
         let image = UIImage(named: imageName)
         
+        if !FileManager.default.fileExists(atPath: FileService.shared.relativePath?.path ?? "") {
+            try? FileManager.default.createDirectory(at: FileService.shared.relativePath!, withIntermediateDirectories: false)
+        }
+        
         if !FileManager.default.fileExists(atPath: FileService.relativePath(with: nameFolder)?.path ?? "") {
             try? FileManager.default.createDirectory(at: FileService.relativePath(with: nameFolder)!, withIntermediateDirectories: false)
         }
+        
+
+        
         guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent("\(imageName).jpeg") else {return}
 
         FileManager.default.createFile(atPath: folder.pathExtension, contents: nil)
