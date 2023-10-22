@@ -79,13 +79,13 @@ struct ImageQuery: EntityStringQuery {
 //        return ImageSource.getAllSource().filter { imageModel in
 //            return identifiers.contains(imageModel.id)
 //        }
-        
+
         
         print("DEBUG: goto entities \(String(describing: identifiers.first))")
 //        return [ImageSource(id: "bird", name: "bird")]
         var a = ImageSource.getAllData()
         return a
-//        return []
+
     }	
     
     func suggestedEntities() async throws -> [ImageSource] {

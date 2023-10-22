@@ -11,7 +11,8 @@ import SwiftUI
 struct WallPaperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            WeatherView()
         }
     }
 }
