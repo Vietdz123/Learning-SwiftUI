@@ -417,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WallPaper/Preview Content\"";
-				DEVELOPMENT_TEAM = X49N5BHN65;
+				DEVELOPMENT_TEAM = AL5596JXF3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -448,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WallPaper/Preview Content\"";
-				DEVELOPMENT_TEAM = X49N5BHN65;
+				DEVELOPMENT_TEAM = AL5596JXF3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -477,7 +477,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Wallpaper-WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X49N5BHN65;
+				DEVELOPMENT_TEAM = AL5596JXF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wallpaper-Widget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Wallpaper-Widget";
@@ -505,7 +505,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Wallpaper-WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X49N5BHN65;
+				DEVELOPMENT_TEAM = AL5596JXF3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wallpaper-Widget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Wallpaper-Widget";

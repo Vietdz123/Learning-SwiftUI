@@ -17,9 +17,14 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Pick a image")
     var imageSrc: ImageSource
     
+//    @Parameter(title: "Pick a image")
+//    var cac: String
+
+    
     func perform() async throws -> some IntentResult {
-            
-        ImageDataModel.shared.updateCurrentIndex() 
+        
+        print("DEBUG: goto perform")
+        ImageDataModel.shared.updateCurrentIndex()
         
         return .result()
     }
@@ -34,6 +39,7 @@ struct ImageSource: AppEntity {
     static var defaultQuery: ImageQuery = ImageQuery()   //EntityQuery
         
     var name: String
+    
     var images: [UIImage] {
         FileService.shared.readAllImages(from: self.name)
     }
@@ -44,6 +50,16 @@ struct ImageSource: AppEntity {
         }
     }
     
+    static func getAllData() -> [ImageSource] {
+       var a =  FileService.shared.getAllFolder().map { name in
+            return ImageSource(id: name, name: name)
+        }
+        
+        a.append(ImageSource(id: "chose", name: "bird"))
+        return a
+    }
+    
+    
     static var typeDisplayRepresentation: TypeDisplayRepresentation = "Image Viet"
     
     var displayRepresentation: DisplayRepresentation {
@@ -51,23 +67,37 @@ struct ImageSource: AppEntity {
     }
 }
 
-struct ImageQuery: EntityQuery {
+struct ImageQuery: EntityStringQuery {
+    func entities(matching string: String) async throws -> [ImageSource] {
+        print("DEBUG: goto matching \(string)")
+        return [ImageSource(id: "bird", name: "bird")]
+        return ImageSource.getAllSource()
+    }
+    
     
     func entities(for identifiers: [ImageSource.ID]) async throws -> [ImageSource] {
 //        return ImageSource.getAllSource().filter { imageModel in
 //            return identifiers.contains(imageModel.id)
 //        }
         
-//        return ImageSource.getAllSource()
-        return []
+        
+        print("DEBUG: goto entities \(String(describing: identifiers.first))")
+//        return [ImageSource(id: "bird", name: "bird")]
+        var a = ImageSource.getAllData()
+        return a
+//        return []
     }	
     
     func suggestedEntities() async throws -> [ImageSource] {
+        print("DEBUG: goto suggestedEntities")
+        
         return ImageSource.getAllSource()
     }
     
     func defaultResult() async -> ImageSource? {
-        try? await suggestedEntities().first
+        print("DEBUG: goto defaultResult")
+//        return try? await suggestedEntities().first
+       return ImageSource(id: "chose", name: "fgdsajkhfgskdjh")
     }
 }
 

@@ -9,15 +9,10 @@ import SwiftUI
 
 struct ImageDataModel {
     
-    static var shared = ImageDataModel(images: [])
+    static var shared = ImageDataModel()
     
-    var images: [UIImage]
+    var images: [UIImage] = []
     var currentIndex = 0
-    
-    init(images: [UIImage], currentIndex: Int = 0) {
-        self.images = images
-        self.currentIndex = currentIndex
-    }
     
     mutating func updateCurrentIndex() {
         if images.count == 0 { return }
@@ -31,10 +26,11 @@ struct ImageDataModel {
     }
     
     var currentImage: UIImage {
+        if shouldShowPlaceHolder { return UIImage(named: "bird")! }
         print("DEBUG: \(currentIndex)")
         return self.images.count == 0 ? UIImage(named: Constant.imagePlacehodel)! : images[currentIndex]
     }
     
-
+    var shouldShowPlaceHolder = true
     
 }
