@@ -23,6 +23,8 @@
 		047858B52AE11CEE0072D7BB /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858B32AE11CEB0072D7BB /* ImageDataModel.swift */; };
 		04D502242AE2294600EE1C81 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502232AE2294600EE1C81 /* SwiftUIView.swift */; };
 		04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502252AE22B3200EE1C81 /* WeatherView.swift */; };
+		7E5DCF3EACDE1B87CAC4CE3A /* Pods_Wallpaper_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071BBC2E1EC88B83EA44054A /* Pods_Wallpaper_WidgetExtension.framework */; };
+		BAF84241BFAFDF6CBB5AA4D5 /* Pods_WallPaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C23CE48AF011109702EEF7 /* Pods_WallPaper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,12 @@
 		047858B32AE11CEB0072D7BB /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		04D502232AE2294600EE1C81 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		04D502252AE22B3200EE1C81 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		071BBC2E1EC88B83EA44054A /* Pods_Wallpaper_WidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallpaper_WidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C23CE48AF011109702EEF7 /* Pods_WallPaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallPaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEE85F91C4AA02199061746 /* Pods-Wallpaper-WidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallpaper-WidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-Wallpaper-WidgetExtension/Pods-Wallpaper-WidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		CFA75F2D85B3E51150DF22A3 /* Pods-Wallpaper-WidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallpaper-WidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-Wallpaper-WidgetExtension/Pods-Wallpaper-WidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		DECDB4A4B86AB7BBFC1759E4 /* Pods-WallPaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallPaper.release.xcconfig"; path = "Target Support Files/Pods-WallPaper/Pods-WallPaper.release.xcconfig"; sourceTree = "<group>"; };
+		EA05EDB8DCB314ED05655B61 /* Pods-WallPaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallPaper.debug.xcconfig"; path = "Target Support Files/Pods-WallPaper/Pods-WallPaper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF84241BFAFDF6CBB5AA4D5 /* Pods_WallPaper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 			files = (
 				0478589B2AE0ED0F0072D7BB /* SwiftUI.framework in Frameworks */,
 				047858992AE0ED0F0072D7BB /* WidgetKit.framework in Frameworks */,
+				7E5DCF3EACDE1B87CAC4CE3A /* Pods_Wallpaper_WidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,7 @@
 				0478589C2AE0ED0F0072D7BB /* Wallpaper-Widget */,
 				047858972AE0ED0F0072D7BB /* Frameworks */,
 				047858822AE0EC1E0072D7BB /* Products */,
+				3A9E749D20DA8632F6C500C5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +150,8 @@
 			children = (
 				047858982AE0ED0F0072D7BB /* WidgetKit.framework */,
 				0478589A2AE0ED0F0072D7BB /* SwiftUI.framework */,
+				70C23CE48AF011109702EEF7 /* Pods_WallPaper.framework */,
+				071BBC2E1EC88B83EA44054A /* Pods_Wallpaper_WidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,6 +177,17 @@
 			path = "Model-Widget";
 			sourceTree = "<group>";
 		};
+		3A9E749D20DA8632F6C500C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA05EDB8DCB314ED05655B61 /* Pods-WallPaper.debug.xcconfig */,
+				DECDB4A4B86AB7BBFC1759E4 /* Pods-WallPaper.release.xcconfig */,
+				CFA75F2D85B3E51150DF22A3 /* Pods-Wallpaper-WidgetExtension.debug.xcconfig */,
+				AEEE85F91C4AA02199061746 /* Pods-Wallpaper-WidgetExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,10 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0478588F2AE0EC200072D7BB /* Build configuration list for PBXNativeTarget "WallPaper" */;
 			buildPhases = (
+				EA40112373EA174BB2FE5180 /* [CP] Check Pods Manifest.lock */,
 				0478587D2AE0EC1E0072D7BB /* Sources */,
 				0478587E2AE0EC1E0072D7BB /* Frameworks */,
 				0478587F2AE0EC1E0072D7BB /* Resources */,
 				047858AC2AE0ED110072D7BB /* Embed Foundation Extensions */,
+				AE60F13A11082D8C2DC31B49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047858A92AE0ED110072D7BB /* Build configuration list for PBXNativeTarget "Wallpaper-WidgetExtension" */;
 			buildPhases = (
+				274796CA32F5D68C94910F6F /* [CP] Check Pods Manifest.lock */,
 				047858922AE0ED0F0072D7BB /* Sources */,
 				047858932AE0ED0F0072D7BB /* Frameworks */,
 				047858942AE0ED0F0072D7BB /* Resources */,
@@ -259,6 +286,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		274796CA32F5D68C94910F6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wallpaper-WidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE60F13A11082D8C2DC31B49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WallPaper/Pods-WallPaper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WallPaper/Pods-WallPaper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WallPaper/Pods-WallPaper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA40112373EA174BB2FE5180 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WallPaper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0478587D2AE0EC1E0072D7BB /* Sources */ = {
@@ -417,6 +508,7 @@
 		};
 		047858902AE0EC200072D7BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA05EDB8DCB314ED05655B61 /* Pods-WallPaper.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -448,6 +540,7 @@
 		};
 		047858912AE0EC200072D7BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DECDB4A4B86AB7BBFC1759E4 /* Pods-WallPaper.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -479,6 +572,7 @@
 		};
 		047858AA2AE0ED110072D7BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFA75F2D85B3E51150DF22A3 /* Pods-Wallpaper-WidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -507,6 +601,7 @@
 		};
 		047858AB2AE0ED110072D7BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEEE85F91C4AA02199061746 /* Pods-Wallpaper-WidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;

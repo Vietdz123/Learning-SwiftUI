@@ -7,6 +7,7 @@
 
 import WidgetKit
 import SwiftUI
+import RealmSwift
 
 @main
 struct Wallpaper_WidgetBundle: WidgetBundle {
