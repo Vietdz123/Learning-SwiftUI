@@ -16,7 +16,7 @@ struct CheckListView: View {
     var body: some View {
         ZStack {
             
-            Image(uiImage: ImageDataViewModel.shared.currentImage)
+            Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
@@ -51,7 +51,6 @@ struct DayView: View {
     var body: some View {
         VStack(content: {
             Button(intent: ToggleButtonIntent(id: model.day.rawValue)) {
-               
                 Image(systemName:  ImageDataViewModel.shared.dateCheckList[model.day.rawValue].isChecked ?
                       "person.crop.circle.badge.checkmark" : "person.badge.shield.checkmark")
             }
@@ -60,6 +59,7 @@ struct DayView: View {
                 .foregroundColor(ImageDataViewModel.shared.dateCheckList[model.day.rawValue].isChecked ?
                     .yellow : .white)
         })
+
     }
 }
 

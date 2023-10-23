@@ -9,7 +9,7 @@ import SwiftUI
 import WidgetKit
 import AppIntents
 
-struct ToggleButtonIntent: WidgetConfigurationIntent {
+struct ToggleButtonIntent: AppIntent {
 
     init() {
         
@@ -25,7 +25,7 @@ struct ToggleButtonIntent: WidgetConfigurationIntent {
     }
     
     func perform() async throws -> some IntentResult & ReturnsValue {
-        
+        print("DEBUG: goto perform button")
         ImageDataViewModel.shared.dateCheckList[id].isChecked.toggle()
         
         return .result()

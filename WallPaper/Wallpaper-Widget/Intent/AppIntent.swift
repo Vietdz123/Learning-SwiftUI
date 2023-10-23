@@ -16,12 +16,13 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Pick a image")
     var imageSrc: ImageSource
     
+    @MainActor
     func perform() async throws -> some IntentResult {
         
         print("DEBUG: goto perform")
         ImageDataViewModel.shared.updateCurrentIndex()
         
-        return .result()
+        return .result()    
     }
 }
 
@@ -33,7 +34,7 @@ struct ImageSource: AppEntity {
     var id: String
     
     static var defaultValue: ImageSource {
-        return ImageSource(id: "choose", folderModel: FolderModel(name: "placeHolder", actualName: "placeHolder", type: .backgroud))
+        return ImageSource(id: "choose", folderModel: FolderModel(name: "placeHolder", actualName: "placeHolder", type: .placeholder))
     }
     
     static var defaultQuery: ImageQuery = ImageQuery()   //EntityQuery

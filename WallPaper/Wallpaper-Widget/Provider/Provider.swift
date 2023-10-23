@@ -11,12 +11,12 @@ import WidgetKit
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SourceImageEntry {
         print("DEBUG: goto placeholder")
-        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder)
+        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, intent: ConfigurationAppIntent())
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SourceImageEntry {
         print("DEBUG: goto snapshot")
-        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder)
+        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, intent: configuration)
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SourceImageEntry> {
@@ -29,7 +29,7 @@ struct Provider: AppIntentTimelineProvider {
         let type = configuration.imageSrc.folderModel.type
         let size = context.displaySize
 
-        let entry = SourceImageEntry(image: image, size: size, type: type)
+        let entry = SourceImageEntry(image: image, size: size, type: type, intent: configuration)
         
         return Timeline(entries: [entry], policy: .never)
     }

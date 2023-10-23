@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct WeatherView: View {
     var body: some View {
@@ -96,53 +97,54 @@ struct WeatherView: View {
             }
             .onAppear {
                 print("DEBUG: siuuu")
-                FileService.shared.writeToSource(with: "Anime",
-                                                 with: "luffy",
-                                                 widgetType: .backgroud)
+//                WidgetCenter.shared.reloadAllTimelines()
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "luffy",
+//                                                 widgetType: .backgroud)
                 
-                FileService.shared.writeToSource(with: "Anime",
-                                                 with: "saukra",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Anime",
-                                                 with: "sasuke",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Anime",
-                                                 with: "naruto",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "1",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "2",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "3",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "4",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "5",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "6",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "Mèo",
-                                                 with: "7",
-                                                 widgetType: .backgroud)
-                
-                FileService.shared.writeToSource(with: "CheckList",
-                                                 with: "Anya",
-                                                 widgetType: .checkList)
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "sakura",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "sasuke",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "sanji",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "1",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "2",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "3",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "4",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "5",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "6",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "Mèo",
+//                                                 with: "7",
+//                                                 widgetType: .backgroud)
+//                
+//                FileService.shared.writeToSource(with: "CheckList",
+//                                                 with: "anya",
+//                                                 widgetType: .checkList)
             }
         })
         

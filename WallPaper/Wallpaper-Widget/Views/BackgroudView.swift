@@ -13,11 +13,12 @@ struct BackgroudView: View {
     
     var image: UIImage
     var size: CGSize
+    @Binding var intent: ConfigurationAppIntent
     
     var body: some View {
         ZStack {
             
-            Image(uiImage: ImageDataViewModel.shared.currentImage)
+            Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()

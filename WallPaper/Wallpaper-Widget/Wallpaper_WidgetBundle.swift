@@ -25,6 +25,10 @@ struct WallpaperWidget: Widget {
                                provider: Provider()) { entry in
             WallpaperWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
+                .onAppear {
+//                    WidgetCenter.shared.reloadAllTimelines()
+                }
         }.contentMarginsDisabled()
+        
     }
 }

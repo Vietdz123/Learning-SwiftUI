@@ -38,6 +38,7 @@ struct PlaceholderView: View {
                 Text("2. Tap Edit Widget")
                 Text("3. Choose a widget from the app")
             }
+            .foregroundColor(.white)
         }
     }
 }

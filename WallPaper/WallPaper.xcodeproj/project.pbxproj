@@ -34,9 +34,7 @@
 		04B9D0992AE65B0C003A773E /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08A2AE622DE003A773E /* AppConstant.swift */; };
 		04B9D09B2AE65EDB003A773E /* WeekendDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */; };
 		04B9D09C2AE65EDB003A773E /* WeekendDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */; };
-		04B9D0A22AE66582003A773E /* WallPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A12AE66582003A773E /* WallPaperView.swift */; };
 		04B9D0A32AE66582003A773E /* WallPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A12AE66582003A773E /* WallPaperView.swift */; };
-		04B9D0A52AE667B6003A773E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A42AE667B6003A773E /* Provider.swift */; };
 		04B9D0A62AE667B6003A773E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A42AE667B6003A773E /* Provider.swift */; };
 		04B9D0A82AE668E7003A773E /* ToggleButtonIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A72AE668E7003A773E /* ToggleButtonIntent.swift */; };
 		04B9D0A92AE668E7003A773E /* ToggleButtonIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A72AE668E7003A773E /* ToggleButtonIntent.swift */; };
@@ -48,6 +46,9 @@
 		04DAE1C82AE6098100EAC5EB /* BackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE1C62AE608B800EAC5EB /* BackgroudView.swift */; };
 		7E5DCF3EACDE1B87CAC4CE3A /* Pods_Wallpaper_WidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071BBC2E1EC88B83EA44054A /* Pods_Wallpaper_WidgetExtension.framework */; };
 		BAF84241BFAFDF6CBB5AA4D5 /* Pods_WallPaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C23CE48AF011109702EEF7 /* Pods_WallPaper.framework */; };
+		D1ACB1522AE6B3ED00DAFEE9 /* WallPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A12AE66582003A773E /* WallPaperView.swift */; };
+		D1ACB1532AE6B50000DAFEE9 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A42AE667B6003A773E /* Provider.swift */; };
+		D1ACB1542AE6B79500DAFEE9 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502252AE22B3200EE1C81 /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,14 +424,14 @@
 			files = (
 				04B9D0942AE6299C003A773E /* FolderModel.swift in Sources */,
 				04B9D0862AE62286003A773E /* BackgroudView.swift in Sources */,
-				04B9D0A52AE667B6003A773E /* Provider.swift in Sources */,
+				D1ACB1522AE6B3ED00DAFEE9 /* WallPaperView.swift in Sources */,
 				04B9D08B2AE622DE003A773E /* AppConstant.swift in Sources */,
+				D1ACB1532AE6B50000DAFEE9 /* Provider.swift in Sources */,
 				04B9D0972AE65AF6003A773E /* CheckListView.swift in Sources */,
 				04B9D09B2AE65EDB003A773E /* WeekendDayModel.swift in Sources */,
 				04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */,
 				04B9D08E2AE623CB003A773E /* WDFolderType.swift in Sources */,
 				047858872AE0EC1E0072D7BB /* ContentView.swift in Sources */,
-				04B9D0A22AE66582003A773E /* WallPaperView.swift in Sources */,
 				04DAE1C52AE6086F00EAC5EB /* ImageDataViewModel.swift in Sources */,
 				04DAE1C32AE6080100EAC5EB /* PlaceholderView.swift in Sources */,
 				047858852AE0EC1E0072D7BB /* WallPaperApp.swift in Sources */,
@@ -453,6 +454,7 @@
 				04B9D0952AE629C0003A773E /* FolderModel.swift in Sources */,
 				04B9D0982AE65AF6003A773E /* CheckListView.swift in Sources */,
 				04B9D0A32AE66582003A773E /* WallPaperView.swift in Sources */,
+				D1ACB1542AE6B79500DAFEE9 /* WeatherView.swift in Sources */,
 				04B9D0A92AE668E7003A773E /* ToggleButtonIntent.swift in Sources */,
 				04DAE1C42AE6083A00EAC5EB /* PlaceholderView.swift in Sources */,
 				047858AF2AE0ED960072D7BB /* FileService.swift in Sources */,
