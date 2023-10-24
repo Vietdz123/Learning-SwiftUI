@@ -41,8 +41,8 @@ struct ImageSource: AppEntity {
         
     var folderModel: FolderModel
     
-    var images: [UIImage] {
-        FileService.shared.readAllImages(from: self.folderModel.name)
+    func getImages(family: FamilyFolderType) -> [UIImage] {
+        FileService.shared.readAllImages(from: self.folderModel.name, with: family)
     }
     
     static func getSuggested() -> [ImageSource] {
@@ -97,4 +97,6 @@ struct ImageQuery: EntityStringQuery {
         return ImageSource.defaultValue
     }
 }
+
+
 

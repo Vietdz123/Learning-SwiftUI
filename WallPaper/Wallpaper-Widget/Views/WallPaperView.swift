@@ -19,13 +19,12 @@ struct SourceImageEntry: TimelineEntry {
 struct WallpaperWidgetEntryView : View {
     
     var entry: SourceImageEntry
-    @State var intent = ConfigurationAppIntent()
 
     var body: some View {
-        
+ 
         switch entry.type {
         case .backgroud:
-            BackgroudView(image: entry.image, size: entry.size, intent: $intent)
+            BackgroudView(image: entry.image, size: entry.size)
         case .checkList:
             CheckListView(image: entry.image, size: entry.size)
         case .placeholder:

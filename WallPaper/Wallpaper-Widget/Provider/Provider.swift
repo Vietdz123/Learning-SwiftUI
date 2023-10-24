@@ -9,6 +9,8 @@ import SwiftUI
 import WidgetKit
 
 struct Provider: AppIntentTimelineProvider {
+    
+    
     func placeholder(in context: Context) -> SourceImageEntry {
         print("DEBUG: goto placeholder")
         return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, intent: ConfigurationAppIntent())
@@ -23,10 +25,18 @@ struct Provider: AppIntentTimelineProvider {
         
         print("DEBUG: goto timeline and \(configuration.imageSrc.folderModel.type)")
 
-        ImageDataViewModel.shared.images = configuration.imageSrc.images
+        switch context.family {
+        case .systemSmall:
+            ImageDataViewModel.shared.images = configuration.imageSrc.getImages(family: .small)
+        case .systemMedium:
+            ImageDataViewModel.shared.images = configuration.imageSrc.getImages(family: .medium)
+        default:
+            ImageDataViewModel.shared.images = []
+        }
         
         let image = ImageDataViewModel.shared.currentImage
         let type = configuration.imageSrc.folderModel.type
+        print("DEBUG: \(type) type")
         let size = context.displaySize
 
         let entry = SourceImageEntry(image: image, size: size, type: type, intent: configuration)

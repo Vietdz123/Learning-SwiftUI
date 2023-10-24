@@ -13,7 +13,6 @@ struct BackgroudView: View {
     
     var image: UIImage
     var size: CGSize
-    @Binding var intent: ConfigurationAppIntent
     
     var body: some View {
         ZStack {

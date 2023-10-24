@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-
+enum FamilyFolderType: String {
+    case small
+    case medium
+    case large
+}
 
 class FileService {
     
@@ -35,41 +39,60 @@ class FileService {
     func getFolderModels() -> [FolderModel] {
         
         let nameFolders = FileService.shared.getAllFolder()
+        
         var folders: [FolderModel] = []
         
         nameFolders.forEach { name in
             let components = name.split(separator: "-")
             if components.count >= 2 {
                 let noIdName = String(components[1])
-                
-                let type = WDFolderType.getType(name: noIdName)
+                let nameType = String(components[0])
+
+                let type = WDFolderType.getType(name: nameType)
                 let folder = FolderModel(name: name, actualName: noIdName, type: type)
                 folders.append(folder)
             }
         }
         
+        
+        nameFolders.forEach { folder in
+            print("DEBUG: \(folder) qqqqqqq 1")
+        }
+        
+        folders.forEach { folder in
+            print("DEBUG: \(folder.type) qqqqqqq")
+        }
+        
         return folders
     }
     
-    func writeToSource(with nameFolder : String, with imageName: String, widgetType: WDFolderType = .backgroud) {
+    func writeToSource(with nameFolder : String, with imageName: String, widgetType: WDFolderType = .backgroud, familySize: FamilyFolderType) {
         let image = UIImage(named: imageName)
         
+        //Image-Folder
         if !FileManager.default.fileExists(atPath: FileService.shared.relativePath?.path ?? "") {
             try? FileManager.default.createDirectory(at: FileService.shared.relativePath!, withIntermediateDirectories: false)
         }
         
-        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: nameFolder)?.path ?? "") {
+        //Image-Folder/Background-Anime/
+        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.path ?? "") {
             try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")!, withIntermediateDirectories: false)
         }
         
-        guard let folder = FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.appendingPathComponent("\(imageName).jpeg") else {return}
-
-        FileManager.default.createFile(atPath: folder.lastPathComponent, contents: nil)
+        //Image-Folder/Background-Anime/small
+        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.appendingPathComponent(familySize.rawValue).path ?? "") {
+            try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")!.appendingPathComponent(familySize.rawValue), withIntermediateDirectories: false)
+        }
         
-        print("DEBUG: \(folder.absoluteString) and \(folder.lastPathComponent)")
+        //Image-Folder/Background-Anime/small/Anya.jpeg
+        guard let file = FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.appendingPathComponent(familySize.rawValue).appendingPathComponent("\(imageName).jpeg") else {return}
+
+        FileManager.default.createFile(atPath: file.lastPathComponent, contents: nil)
+        
+        print("DEBUG: \(file.absoluteString) and \(file.lastPathComponent)")
         if let data = image?.pngData() {
             do {
-                try data.write(to: folder.absoluteURL)
+                try data.write(to: file.absoluteURL)
             } catch {
                 print("DEBUG: \(error.localizedDescription)")
             }
@@ -77,8 +100,8 @@ class FileService {
         }
     }
     
-    func readAllImages(from nameFolder: String) -> [UIImage] {
-        guard let folder = FileService.relativePath(with: nameFolder) else {return []}
+    func readAllImages(from nameFolder: String, with family: FamilyFolderType) -> [UIImage] {
+        guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent(family.rawValue) else {return []}
         guard var urls = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: [.creationDateKey]) else {
             return []
         }
@@ -92,7 +115,8 @@ class FileService {
         })
         
         var images: [UIImage] = []
-    
+        
+        print("DEBUG: \(urls.count) ccc")
         urls.forEach({ url in
             print("DEBUG: \(url)")
             guard let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {return}

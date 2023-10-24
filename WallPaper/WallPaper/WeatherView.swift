@@ -21,7 +21,6 @@ struct WeatherView: View {
                     Text("Cupertino, CA")
                         .foregroundColor(.white)
                         .font(.system(size: 32, weight: .medium))
-                        .padding(.top, 50)
                         .padding(.bottom, 0)
                     
                     Image(systemName: "cloud.sun.fill")
@@ -79,72 +78,78 @@ struct WeatherView: View {
                     .background(.white)
                     .cornerRadius(16)
                     
-                    HStack {
-                        Text("This is a short string.")
-                            .padding()
-                            .frame(maxHeight: .infinity)
-                            .background(.red)
-
-                        Text("This is a very long string with lots and lots of text that will definitely run across multiple lines because it's just so long.")
-                            .padding()
-//                            .frame(maxHeight: .infinity)
-                            .background(.green)
-                    }
-                    .background(.yellow)
                 }
 
                 Spacer()
             }
             .onAppear {
                 print("DEBUG: siuuu")
-//                WidgetCenter.shared.reloadAllTimelines()
+                WidgetCenter.shared.reloadAllTimelines()
 //                FileService.shared.writeToSource(with: "Anime",
 //                                                 with: "luffy",
-//                                                 widgetType: .backgroud)
-                
+//                                                 widgetType: .backgroud, familySize: .medium)
+//                
 //                FileService.shared.writeToSource(with: "Anime",
 //                                                 with: "sakura",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Anime",
 //                                                 with: "sasuke",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Anime",
 //                                                 with: "sanji",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
+//                
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "m1",
+//                                                 widgetType: .backgroud, familySize: .small)
+//                
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "m2",
+//                                                 widgetType: .backgroud, familySize: .small)
+//                
+//                FileService.shared.writeToSource(with: "Anime",
+//                                                 with: "m3",
+//                                                 widgetType: .backgroud, familySize: .small)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "1",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "2",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "3",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "4",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "5",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "6",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
 //                FileService.shared.writeToSource(with: "Mèo",
 //                                                 with: "7",
-//                                                 widgetType: .backgroud)
+//                                                 widgetType: .backgroud, familySize: .medium)
 //                
-//                FileService.shared.writeToSource(with: "CheckList",
+//                FileService.shared.writeToSource(with: "Checklist",
 //                                                 with: "anya",
-//                                                 widgetType: .checkList)
+//                                                 widgetType: .checkList, familySize: .medium)
+//                
+//                FileService.shared.writeToSource(with: "Checklist",
+//                                                 with: "m1",
+//                                                 widgetType: .checkList, familySize: .small)
+                
+        
             }
         })
         
@@ -183,3 +188,7 @@ struct WeatherDayView: View {
         }
     }
 }
+
+#Preview(body: {
+    WeatherView()
+})
