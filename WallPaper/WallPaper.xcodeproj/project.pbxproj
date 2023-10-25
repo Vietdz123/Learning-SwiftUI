@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046B77282AE9055300E1CC48 /* ButtonCheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B77272AE9055300E1CC48 /* ButtonCheckListModel.swift */; };
+		046B77292AE91B8600E1CC48 /* ButtonCheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B77272AE9055300E1CC48 /* ButtonCheckListModel.swift */; };
 		047858852AE0EC1E0072D7BB /* WallPaperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858842AE0EC1E0072D7BB /* WallPaperApp.swift */; };
-		047858872AE0EC1E0072D7BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858862AE0EC1E0072D7BB /* ContentView.swift */; };
 		047858892AE0EC200072D7BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047858882AE0EC200072D7BB /* Assets.xcassets */; };
 		0478588C2AE0EC200072D7BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478588B2AE0EC200072D7BB /* Preview Assets.xcassets */; };
 		047858992AE0ED0F0072D7BB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047858982AE0ED0F0072D7BB /* WidgetKit.framework */; };
@@ -24,9 +25,7 @@
 		04B9D0862AE62286003A773E /* BackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE1C62AE608B800EAC5EB /* BackgroudView.swift */; };
 		04B9D08B2AE622DE003A773E /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08A2AE622DE003A773E /* AppConstant.swift */; };
 		04B9D08E2AE623CB003A773E /* WDFolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08D2AE623CB003A773E /* WDFolderType.swift */; };
-		04B9D0902AE6250A003A773E /* WidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08F2AE6250A003A773E /* WidgetModel.swift */; };
 		04B9D0912AE62519003A773E /* WDFolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08D2AE623CB003A773E /* WDFolderType.swift */; };
-		04B9D0922AE626AA003A773E /* WidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08F2AE6250A003A773E /* WidgetModel.swift */; };
 		04B9D0942AE6299C003A773E /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0932AE6299C003A773E /* FolderModel.swift */; };
 		04B9D0952AE629C0003A773E /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0932AE6299C003A773E /* FolderModel.swift */; };
 		04B9D0972AE65AF6003A773E /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0962AE65AF6003A773E /* CheckListView.swift */; };
@@ -38,7 +37,6 @@
 		04B9D0A62AE667B6003A773E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A42AE667B6003A773E /* Provider.swift */; };
 		04B9D0A82AE668E7003A773E /* ToggleButtonIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A72AE668E7003A773E /* ToggleButtonIntent.swift */; };
 		04B9D0A92AE668E7003A773E /* ToggleButtonIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A72AE668E7003A773E /* ToggleButtonIntent.swift */; };
-		04D502242AE2294600EE1C81 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502232AE2294600EE1C81 /* SwiftUIView.swift */; };
 		04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D502252AE22B3200EE1C81 /* WeatherView.swift */; };
 		04DAE1C32AE6080100EAC5EB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE1C22AE6080100EAC5EB /* PlaceholderView.swift */; };
 		04DAE1C42AE6083A00EAC5EB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE1C22AE6080100EAC5EB /* PlaceholderView.swift */; };
@@ -76,9 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		046B77272AE9055300E1CC48 /* ButtonCheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCheckListModel.swift; sourceTree = "<group>"; };
 		047858812AE0EC1E0072D7BB /* WallPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047858842AE0EC1E0072D7BB /* WallPaperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallPaperApp.swift; sourceTree = "<group>"; };
-		047858862AE0EC1E0072D7BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		047858882AE0EC200072D7BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0478588B2AE0EC200072D7BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		047858962AE0ED0F0072D7BB /* Wallpaper-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Wallpaper-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,14 +92,12 @@
 		047858B32AE11CEB0072D7BB /* ImageDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataViewModel.swift; sourceTree = "<group>"; };
 		04B9D08A2AE622DE003A773E /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		04B9D08D2AE623CB003A773E /* WDFolderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDFolderType.swift; sourceTree = "<group>"; };
-		04B9D08F2AE6250A003A773E /* WidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetModel.swift; sourceTree = "<group>"; };
 		04B9D0932AE6299C003A773E /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
 		04B9D0962AE65AF6003A773E /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendDayModel.swift; sourceTree = "<group>"; };
 		04B9D0A12AE66582003A773E /* WallPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallPaperView.swift; sourceTree = "<group>"; };
 		04B9D0A42AE667B6003A773E /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		04B9D0A72AE668E7003A773E /* ToggleButtonIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonIntent.swift; sourceTree = "<group>"; };
-		04D502232AE2294600EE1C81 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		04D502252AE22B3200EE1C81 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		04DAE1C22AE6080100EAC5EB /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		04DAE1C62AE608B800EAC5EB /* BackgroudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroudView.swift; sourceTree = "<group>"; };
@@ -135,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046B77262AE904CF00E1CC48 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				047858AD2AE0ED590072D7BB /* FileService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		047858782AE0EC1E0072D7BB = {
 			isa = PBXGroup;
 			children = (
@@ -159,14 +163,12 @@
 		047858832AE0EC1E0072D7BB /* WallPaper */ = {
 			isa = PBXGroup;
 			children = (
+				046B77262AE904CF00E1CC48 /* Services */,
 				04B9D08C2AE62362003A773E /* Model */,
 				04B9D0892AE622C9003A773E /* Constant */,
 				047858B02AE105FC0072D7BB /* WallPaper.entitlements */,
 				047858842AE0EC1E0072D7BB /* WallPaperApp.swift */,
-				04D502232AE2294600EE1C81 /* SwiftUIView.swift */,
-				047858862AE0EC1E0072D7BB /* ContentView.swift */,
 				04D502252AE22B3200EE1C81 /* WeatherView.swift */,
-				047858AD2AE0ED590072D7BB /* FileService.swift */,
 				047858882AE0EC200072D7BB /* Assets.xcassets */,
 				0478588A2AE0EC200072D7BB /* Preview Content */,
 			);
@@ -210,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				047858B32AE11CEB0072D7BB /* ImageDataViewModel.swift */,
-				04B9D08F2AE6250A003A773E /* WidgetModel.swift */,
 			);
 			path = "Model-Widget";
 			sourceTree = "<group>";
@@ -246,6 +247,7 @@
 				04B9D08D2AE623CB003A773E /* WDFolderType.swift */,
 				04B9D0932AE6299C003A773E /* FolderModel.swift */,
 				04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */,
+				046B77272AE9055300E1CC48 /* ButtonCheckListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,14 +433,12 @@
 				04B9D09B2AE65EDB003A773E /* WeekendDayModel.swift in Sources */,
 				04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */,
 				04B9D08E2AE623CB003A773E /* WDFolderType.swift in Sources */,
-				047858872AE0EC1E0072D7BB /* ContentView.swift in Sources */,
 				04DAE1C52AE6086F00EAC5EB /* ImageDataViewModel.swift in Sources */,
 				04DAE1C32AE6080100EAC5EB /* PlaceholderView.swift in Sources */,
 				047858852AE0EC1E0072D7BB /* WallPaperApp.swift in Sources */,
+				046B77282AE9055300E1CC48 /* ButtonCheckListModel.swift in Sources */,
 				04B9D0A82AE668E7003A773E /* ToggleButtonIntent.swift in Sources */,
 				04B9D0852AE62117003A773E /* AppIntent.swift in Sources */,
-				04B9D0902AE6250A003A773E /* WidgetModel.swift in Sources */,
-				04D502242AE2294600EE1C81 /* SwiftUIView.swift in Sources */,
 				047858AE2AE0ED590072D7BB /* FileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +447,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B9D0922AE626AA003A773E /* WidgetModel.swift in Sources */,
 				047858B52AE11CEE0072D7BB /* ImageDataViewModel.swift in Sources */,
 				04B9D0A62AE667B6003A773E /* Provider.swift in Sources */,
 				04B9D0992AE65B0C003A773E /* AppConstant.swift in Sources */,
@@ -460,6 +459,7 @@
 				047858AF2AE0ED960072D7BB /* FileService.swift in Sources */,
 				0478589E2AE0ED0F0072D7BB /* Wallpaper_WidgetBundle.swift in Sources */,
 				047858A22AE0ED0F0072D7BB /* AppIntent.swift in Sources */,
+				046B77292AE91B8600E1CC48 /* ButtonCheckListModel.swift in Sources */,
 				04B9D0912AE62519003A773E /* WDFolderType.swift in Sources */,
 				04DAE1C82AE6098100EAC5EB /* BackgroudView.swift in Sources */,
 				04B9D09C2AE65EDB003A773E /* WeekendDayModel.swift in Sources */,

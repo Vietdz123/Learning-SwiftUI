@@ -16,10 +16,8 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Pick a image")
     var imageSrc: ImageSource
     
-    @MainActor
     func perform() async throws -> some IntentResult {
         
-        print("DEBUG: goto perform")
         ImageDataViewModel.shared.updateCurrentIndex()
         
         return .result()    
@@ -34,7 +32,7 @@ struct ImageSource: AppEntity {
     var id: String
     
     static var defaultValue: ImageSource {
-        return ImageSource(id: "choose", folderModel: FolderModel(name: "placeHolder", actualName: "placeHolder", type: .placeholder))
+        return ImageSource(id: "choose", folderModel: FolderModel(name: "placeHolder", suggestedName: "placeHolder", type: .placeholder))
     }
     
     static var defaultQuery: ImageQuery = ImageQuery()   //EntityQuery
@@ -45,15 +43,19 @@ struct ImageSource: AppEntity {
         FileService.shared.readAllImages(from: self.folderModel.name, with: family)
     }
     
+    func getButtonChecklistModel() -> ButtonCheckListModel {
+        FileService.shared.getButtonChecklistModel(from: self.folderModel.name)
+    }
+    
     static func getSuggested() -> [ImageSource] {
         return FileService.shared.getFolderModels().map { folder in
-            return ImageSource(id: folder.actualName, folderModel: folder)
+            return ImageSource(id: folder.suggestedName, folderModel: folder)
         }
     }
     
     static func getAllSource() -> [ImageSource] {
         var src = FileService.shared.getFolderModels().map { folder in
-            return ImageSource(id: folder.actualName, folderModel: folder)
+            return ImageSource(id: folder.suggestedName, folderModel: folder)
         }
         
         src.append(ImageSource.defaultValue)
@@ -71,7 +73,6 @@ struct ImageSource: AppEntity {
 struct ImageQuery: EntityStringQuery {
     func entities(matching string: String) async throws -> [ImageSource] {
         return ImageSource.getAllSource().filter { imgsrc in
-            print("DEBUG: qqq \(imgsrc.id) and \(string)")
             return imgsrc.id == string
         }
     }

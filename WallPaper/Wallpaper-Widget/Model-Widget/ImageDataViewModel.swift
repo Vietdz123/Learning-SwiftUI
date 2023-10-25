@@ -11,16 +11,12 @@ struct ImageDataViewModel {
     
     static var shared = ImageDataViewModel()
     
-    var model: WidgetModel = WidgetModel(type: .backgroud, images: [], name: "")
     var dateCheckList: [WeekendDayModel] = [.init(day: .monday), .init(day: .tuesday), .init(day: .thursday),
                                             .init(day: .wednesday), .init(day: .friday),
                                             .init(day: .saturday), .init(day: .sunday)]
     var currentIndex = 0
     var images: [UIImage] = []
-    
-    var widgetType: WDFolderType {
-        return model.type
-    }
+    var btnChecklistModel = ButtonCheckListModel()
     
     mutating func updateCurrentIndex() {
         if images.count == 0 { return }

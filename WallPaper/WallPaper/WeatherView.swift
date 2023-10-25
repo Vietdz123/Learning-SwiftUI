@@ -9,10 +9,13 @@ import SwiftUI
 import WidgetKit
 
 struct WeatherView: View {
+    
+    @State var isNight = false
+    
     var body: some View {
         GeometryReader(content: { geometry in
             ZStack {
-                LinearGradient(colors: [.blue, .white],
+                LinearGradient(colors: isNight ? [.gray, .blue] : [.blue, .white],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
                 .ignoresSafeArea()
@@ -65,22 +68,15 @@ struct WeatherView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding(.leading, 16)
                     .padding(.trailing, 16)
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 50)
                     .border(.red)
                     
-                    Button(action: {
-                        print("DEBUG: siuuu")
-                    }, label: {
-                        Text("Change Day Time")
-                            .font(.title)
-                    })
-                    .frame(width: geometry.size.width / 2, height: 50)
-                    .background(.white)
-                    .cornerRadius(16)
+                    ChangeDayButton(isNight: $isNight, size: geometry.size)
                     
+                    Spacer()
                 }
 
-                Spacer()
+                
             }
             .onAppear {
                 print("DEBUG: siuuu")
@@ -149,13 +145,34 @@ struct WeatherView: View {
 //                                                 with: "m1",
 //                                                 widgetType: .checkList, familySize: .small)
                 
-        
+                FileService.shared.writeToBtnCheckListFolder(with: "Checklist", with: "sasuke", sizeBtn: .checked)
+                FileService.shared.writeToBtnCheckListFolder(with: "Checklist", with: "sakura", sizeBtn: .uncheck)
             }
         })
+        
+       
         
     }
 }
 
+struct ChangeDayButton: View {
+    
+    @Binding var isNight: Bool
+    var size: CGSize
+    
+    var body: some View {
+        Button(action: {
+            isNight.toggle()
+        }, label: {
+            Text("Change Day Time")
+                .font(.title)
+                .bold()
+        })
+        .frame(width: size.width * 0.75, height: 50)
+        .background(.white)
+        .cornerRadius(16)
+    }
+}
 
 
 struct WeatherDayView: View {
@@ -188,7 +205,3 @@ struct WeatherDayView: View {
         }
     }
 }
-
-#Preview(body: {
-    WeatherView()
-})

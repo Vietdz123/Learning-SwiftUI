@@ -12,6 +12,7 @@ struct CheckListView: View {
     
     var image: UIImage
     var size: CGSize
+    var btnCLModel: ButtonCheckListModel
     
     var body: some View {
         ZStack {
@@ -26,16 +27,16 @@ struct CheckListView: View {
             VStack(content: {
                 
                 HStack(content: {
-                    DayView(model: WeekendDayModel(day: .monday))
-                    DayView(model: WeekendDayModel(day: .tuesday))
-                    DayView(model: WeekendDayModel(day: .wednesday))
-                    DayView(model: WeekendDayModel(day: .thursday))
+                    DayView(model: WeekendDayModel(day: .monday), btnCLModel: btnCLModel)
+                    DayView(model: WeekendDayModel(day: .tuesday), btnCLModel: btnCLModel)
+                    DayView(model: WeekendDayModel(day: .wednesday), btnCLModel: btnCLModel)
+                    DayView(model: WeekendDayModel(day: .thursday), btnCLModel: btnCLModel)
                 })
                 
                 HStack(content: {
-                    DayView(model: WeekendDayModel(day: .friday))
-                    DayView(model: WeekendDayModel(day: .saturday))
-                    DayView(model: WeekendDayModel(day: .sunday))
+                    DayView(model: WeekendDayModel(day: .friday), btnCLModel: btnCLModel)
+                    DayView(model: WeekendDayModel(day: .saturday), btnCLModel: btnCLModel)
+                    DayView(model: WeekendDayModel(day: .sunday), btnCLModel: btnCLModel)
                 })
                 
             })
@@ -47,12 +48,15 @@ struct CheckListView: View {
 struct DayView: View {
     
     var model: WeekendDayModel
+    var btnCLModel: ButtonCheckListModel
     
     var body: some View {
         VStack(content: {
             Button(intent: ToggleButtonIntent(id: model.day.rawValue)) {
-                Image(systemName:  ImageDataViewModel.shared.dateCheckList[model.day.rawValue].isChecked ?
-                      "person.crop.circle.badge.checkmark" : "person.badge.shield.checkmark")
+                Image(uiImage:  ImageDataViewModel.shared.dateCheckList[model.day.rawValue].isChecked ?
+                      btnCLModel.checkImage : btnCLModel.uncheckImage)
+                .resizable()
+                .frame(width: 60, height: 35)
             }
             
             Text(model.day.nameDay)

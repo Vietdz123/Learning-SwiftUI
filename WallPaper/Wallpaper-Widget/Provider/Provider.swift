@@ -13,12 +13,12 @@ struct Provider: AppIntentTimelineProvider {
     
     func placeholder(in context: Context) -> SourceImageEntry {
         print("DEBUG: goto placeholder")
-        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, intent: ConfigurationAppIntent())
+        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, btnChecklistModel: ButtonCheckListModel())
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SourceImageEntry {
         print("DEBUG: goto snapshot")
-        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, intent: configuration)
+        return SourceImageEntry(image: UIImage(named: AssetConstant.imagePlacehodel)!, size: context.displaySize, type: .placeholder, btnChecklistModel: ButtonCheckListModel())
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SourceImageEntry> {
@@ -33,13 +33,13 @@ struct Provider: AppIntentTimelineProvider {
         default:
             ImageDataViewModel.shared.images = []
         }
-        
+                
         let image = ImageDataViewModel.shared.currentImage
         let type = configuration.imageSrc.folderModel.type
-        print("DEBUG: \(type) type")
         let size = context.displaySize
-
-        let entry = SourceImageEntry(image: image, size: size, type: type, intent: configuration)
+        let btnCLModel = configuration.imageSrc.getButtonChecklistModel()
+        
+        let entry = SourceImageEntry(image: image, size: size, type: type, btnChecklistModel: btnCLModel)
         
         return Timeline(entries: [entry], policy: .never)
     }

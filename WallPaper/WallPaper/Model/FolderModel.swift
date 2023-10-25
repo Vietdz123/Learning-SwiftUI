@@ -10,7 +10,7 @@ import SwiftUI
 struct FolderModel {
     
     var name: String        //HasID
-    var actualName: String  //noID
+    var suggestedName: String  //noID
     var type: WDFolderType
 
     

@@ -13,7 +13,7 @@ struct SourceImageEntry: TimelineEntry {
     let image: UIImage
     let size: CGSize
     let type: WDFolderType
-    let intent: ConfigurationAppIntent
+    let btnChecklistModel: ButtonCheckListModel
 }
 
 struct WallpaperWidgetEntryView : View {
@@ -26,7 +26,7 @@ struct WallpaperWidgetEntryView : View {
         case .backgroud:
             BackgroudView(image: entry.image, size: entry.size)
         case .checkList:
-            CheckListView(image: entry.image, size: entry.size)
+            CheckListView(image: entry.image, size: entry.size, btnCLModel: entry.btnChecklistModel)
         case .placeholder:
             PlaceholderView(size: entry.size)
         }
