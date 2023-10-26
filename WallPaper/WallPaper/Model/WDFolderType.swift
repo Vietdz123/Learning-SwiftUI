@@ -7,21 +7,34 @@
 
 import Foundation
 
-enum WDFolderType: Int, CaseIterable {
+enum FamilyFolderType: String, CaseIterable {
     
-    case backgroud
-    case checkList
-    case placeholder
+    case square = "square"
+    case rectangle = "rectangle"
+    case check = "check"
+    case uncheck = "uncheck"
+    
+    static func getType(name: String) -> FamilyFolderType {
+        
+        for type in FamilyFolderType.allCases {
+            if type.rawValue == name {
+                return type
+            }
+        }
+        
+        return .square
+        
+    }
+}
+
+enum WDFolderType: String, CaseIterable {
+    
+    case digitalFriend = "Digital Friend"
+    case routineMonitor = "Routine Monitor"
+    case placeholder = "placeholder"
     
     var nameId: String {
-        switch self {
-        case .backgroud:
-            return "Background"
-        case .checkList:
-            return "CheckList"
-        case .placeholder:
-            return "placeholder"
-        }
+        return self.rawValue
     }
     
     static func getType(name: String) -> WDFolderType {
@@ -32,7 +45,7 @@ enum WDFolderType: Int, CaseIterable {
             }
         }
         
-        return .backgroud
+        return .digitalFriend
         
     }
 }

@@ -26,10 +26,10 @@ struct Provider: AppIntentTimelineProvider {
         print("DEBUG: goto timeline and \(configuration.imageSrc.folderModel.type)")
 
         switch context.family {
-        case .systemSmall:
-            ImageDataViewModel.shared.images = configuration.imageSrc.getImages(family: .small)
+        case .systemSmall, .systemLarge:
+            ImageDataViewModel.shared.images = configuration.imageSrc.getImages(family: .square)
         case .systemMedium:
-            ImageDataViewModel.shared.images = configuration.imageSrc.getImages(family: .medium)
+            ImageDataViewModel.shared.images = configuration.imageSrc.getImages(family: .rectangle)
         default:
             ImageDataViewModel.shared.images = []
         }

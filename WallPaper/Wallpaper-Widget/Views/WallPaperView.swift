@@ -23,9 +23,10 @@ struct WallpaperWidgetEntryView : View {
     var body: some View {
  
         switch entry.type {
-        case .backgroud:
+            
+        case .digitalFriend:
             BackgroudView(image: entry.image, size: entry.size)
-        case .checkList:
+        case .routineMonitor:
             CheckListView(image: entry.image, size: entry.size, btnCLModel: entry.btnChecklistModel)
         case .placeholder:
             PlaceholderView(size: entry.size)

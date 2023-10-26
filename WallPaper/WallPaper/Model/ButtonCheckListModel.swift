@@ -34,7 +34,7 @@ enum ButtonCheck: String, CaseIterable {
 
 struct ButtonCheckListModel {
     
-    var checkImage: UIImage = UIImage(named: AssetConstant.checklistButton)!
-    var uncheckImage: UIImage = UIImage(named: AssetConstant.unchecklistButton)!
+    var checkImage: [UIImage] = []
+    var uncheckImage: [UIImage] = []
     
 }

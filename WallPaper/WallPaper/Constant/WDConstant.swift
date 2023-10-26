@@ -8,10 +8,10 @@
 import SwiftUI
 
 
-struct AppConstant {
+struct WDConstant {
     static let groupConstant = "group.demo.WallPaper"
     static let keyPlaceHolder = "choose"
-    static let folderButtonChecklistName = "FolderButtonChecklistName-EZTech"
+    static let folderButtonChecklistName = "FolderButtonChecklist"
 }
 
 struct AssetConstant {

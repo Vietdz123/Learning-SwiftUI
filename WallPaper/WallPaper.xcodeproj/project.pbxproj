@@ -21,16 +21,20 @@
 		047858AE2AE0ED590072D7BB /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858AD2AE0ED590072D7BB /* FileService.swift */; };
 		047858AF2AE0ED960072D7BB /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858AD2AE0ED590072D7BB /* FileService.swift */; };
 		047858B52AE11CEE0072D7BB /* ImageDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858B32AE11CEB0072D7BB /* ImageDataViewModel.swift */; };
+		04884E652AE9F837009E5766 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04884E642AE9F837009E5766 /* NetworkManager.swift */; };
+		04884E6A2AEA036F009E5766 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04884E642AE9F837009E5766 /* NetworkManager.swift */; };
+		04884E6C2AEA03F0009E5766 /* WDNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04884E662AE9FC9D009E5766 /* WDNetworkModel.swift */; };
+		04884E6E2AEA0428009E5766 /* WDNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04884E662AE9FC9D009E5766 /* WDNetworkModel.swift */; };
 		04B9D0852AE62117003A773E /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047858A12AE0ED0F0072D7BB /* AppIntent.swift */; };
 		04B9D0862AE62286003A773E /* BackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAE1C62AE608B800EAC5EB /* BackgroudView.swift */; };
-		04B9D08B2AE622DE003A773E /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08A2AE622DE003A773E /* AppConstant.swift */; };
+		04B9D08B2AE622DE003A773E /* WDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08A2AE622DE003A773E /* WDConstant.swift */; };
 		04B9D08E2AE623CB003A773E /* WDFolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08D2AE623CB003A773E /* WDFolderType.swift */; };
 		04B9D0912AE62519003A773E /* WDFolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08D2AE623CB003A773E /* WDFolderType.swift */; };
 		04B9D0942AE6299C003A773E /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0932AE6299C003A773E /* FolderModel.swift */; };
 		04B9D0952AE629C0003A773E /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0932AE6299C003A773E /* FolderModel.swift */; };
 		04B9D0972AE65AF6003A773E /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0962AE65AF6003A773E /* CheckListView.swift */; };
 		04B9D0982AE65AF6003A773E /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0962AE65AF6003A773E /* CheckListView.swift */; };
-		04B9D0992AE65B0C003A773E /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08A2AE622DE003A773E /* AppConstant.swift */; };
+		04B9D0992AE65B0C003A773E /* WDConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D08A2AE622DE003A773E /* WDConstant.swift */; };
 		04B9D09B2AE65EDB003A773E /* WeekendDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */; };
 		04B9D09C2AE65EDB003A773E /* WeekendDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */; };
 		04B9D0A32AE66582003A773E /* WallPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9D0A12AE66582003A773E /* WallPaperView.swift */; };
@@ -90,7 +94,9 @@
 		047858B02AE105FC0072D7BB /* WallPaper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WallPaper.entitlements; sourceTree = "<group>"; };
 		047858B12AE1075A0072D7BB /* Wallpaper-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wallpaper-WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		047858B32AE11CEB0072D7BB /* ImageDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataViewModel.swift; sourceTree = "<group>"; };
-		04B9D08A2AE622DE003A773E /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		04884E642AE9F837009E5766 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		04884E662AE9FC9D009E5766 /* WDNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDNetworkModel.swift; sourceTree = "<group>"; };
+		04B9D08A2AE622DE003A773E /* WDConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDConstant.swift; sourceTree = "<group>"; };
 		04B9D08D2AE623CB003A773E /* WDFolderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDFolderType.swift; sourceTree = "<group>"; };
 		04B9D0932AE6299C003A773E /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
 		04B9D0962AE65AF6003A773E /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				047858AD2AE0ED590072D7BB /* FileService.swift */,
+				04884E642AE9F837009E5766 /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,7 +243,7 @@
 		04B9D0892AE622C9003A773E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				04B9D08A2AE622DE003A773E /* AppConstant.swift */,
+				04B9D08A2AE622DE003A773E /* WDConstant.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				04B9D08D2AE623CB003A773E /* WDFolderType.swift */,
+				04884E662AE9FC9D009E5766 /* WDNetworkModel.swift */,
 				04B9D0932AE6299C003A773E /* FolderModel.swift */,
 				04B9D09A2AE65EDB003A773E /* WeekendDayModel.swift */,
 				046B77272AE9055300E1CC48 /* ButtonCheckListModel.swift */,
@@ -427,13 +435,15 @@
 				04B9D0942AE6299C003A773E /* FolderModel.swift in Sources */,
 				04B9D0862AE62286003A773E /* BackgroudView.swift in Sources */,
 				D1ACB1522AE6B3ED00DAFEE9 /* WallPaperView.swift in Sources */,
-				04B9D08B2AE622DE003A773E /* AppConstant.swift in Sources */,
+				04B9D08B2AE622DE003A773E /* WDConstant.swift in Sources */,
 				D1ACB1532AE6B50000DAFEE9 /* Provider.swift in Sources */,
 				04B9D0972AE65AF6003A773E /* CheckListView.swift in Sources */,
 				04B9D09B2AE65EDB003A773E /* WeekendDayModel.swift in Sources */,
 				04D502262AE22B3200EE1C81 /* WeatherView.swift in Sources */,
 				04B9D08E2AE623CB003A773E /* WDFolderType.swift in Sources */,
+				04884E6E2AEA0428009E5766 /* WDNetworkModel.swift in Sources */,
 				04DAE1C52AE6086F00EAC5EB /* ImageDataViewModel.swift in Sources */,
+				04884E652AE9F837009E5766 /* NetworkManager.swift in Sources */,
 				04DAE1C32AE6080100EAC5EB /* PlaceholderView.swift in Sources */,
 				047858852AE0EC1E0072D7BB /* WallPaperApp.swift in Sources */,
 				046B77282AE9055300E1CC48 /* ButtonCheckListModel.swift in Sources */,
@@ -447,14 +457,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04884E6A2AEA036F009E5766 /* NetworkManager.swift in Sources */,
 				047858B52AE11CEE0072D7BB /* ImageDataViewModel.swift in Sources */,
 				04B9D0A62AE667B6003A773E /* Provider.swift in Sources */,
-				04B9D0992AE65B0C003A773E /* AppConstant.swift in Sources */,
+				04B9D0992AE65B0C003A773E /* WDConstant.swift in Sources */,
 				04B9D0952AE629C0003A773E /* FolderModel.swift in Sources */,
 				04B9D0982AE65AF6003A773E /* CheckListView.swift in Sources */,
 				04B9D0A32AE66582003A773E /* WallPaperView.swift in Sources */,
 				D1ACB1542AE6B79500DAFEE9 /* WeatherView.swift in Sources */,
 				04B9D0A92AE668E7003A773E /* ToggleButtonIntent.swift in Sources */,
+				04884E6C2AEA03F0009E5766 /* WDNetworkModel.swift in Sources */,
 				04DAE1C42AE6083A00EAC5EB /* PlaceholderView.swift in Sources */,
 				047858AF2AE0ED960072D7BB /* FileService.swift in Sources */,
 				0478589E2AE0ED0F0072D7BB /* Wallpaper_WidgetBundle.swift in Sources */,

@@ -7,29 +7,17 @@
 
 import SwiftUI
 
-enum FamilyFolderType: String {
-    case small
-    case medium
-    case large
-}
-
-
-
-
-
-
-
 
 class FileService {
     
     static let shared = FileService()
     
     static func relativePath(with nameFolder: String) -> URL? {
-        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstant.groupConstant)?.appendingPathComponent("Image-Folder").appendingPathComponent(nameFolder)
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: WDConstant.groupConstant)?.appendingPathComponent("Image-Folder").appendingPathComponent(nameFolder)
     }
     
      var relativePath: URL? {
-         return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: AppConstant.groupConstant)?.appendingPathComponent("Image-Folder")
+         return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: WDConstant.groupConstant)?.appendingPathComponent("Image-Folder")
     }
     
     
@@ -54,8 +42,13 @@ class FileService {
         return folders
     }
     
-    func writeToSource(with nameFolder : String, with imageName: String, widgetType: WDFolderType = .backgroud, familySize: FamilyFolderType) {
-        let image = UIImage(named: imageName)
+    func writeToSource(with nameFolder : String,
+                       with urlImage: URL,
+                       with filename: String,
+                       widgetType: WDFolderType = .digitalFriend,
+                       familySize: FamilyFolderType) {
+        
+        guard let dataImage = try? Data(contentsOf: urlImage) else {return}
         
         //Image-Folder
         if !FileManager.default.fileExists(atPath: FileService.shared.relativePath?.path ?? "") {
@@ -67,30 +60,32 @@ class FileService {
             try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")!, withIntermediateDirectories: false)
         }
         
-        //Image-Folder/Background-Anime/small
+        //Image-Folder/Background-Anime/Square
         if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.appendingPathComponent(familySize.rawValue).path ?? "") {
             try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")!.appendingPathComponent(familySize.rawValue), withIntermediateDirectories: false)
         }
         
-        //Image-Folder/Background-Anime/small/Anya.jpeg
-        guard let file = FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.appendingPathComponent(familySize.rawValue).appendingPathComponent("\(imageName).jpeg") else {return}
+        //Image-Folder/Background-Anime/Square/Anya.jpeg
+        guard let file = FileService.relativePath(with: "\(widgetType.nameId)-\(nameFolder)")?.appendingPathComponent(familySize.rawValue).appendingPathComponent("\(filename)") else {return}
 
         FileManager.default.createFile(atPath: file.lastPathComponent, contents: nil)
         
         print("DEBUG: \(file.absoluteString) and \(file.lastPathComponent)")
-        if let data = image?.pngData() {
-            do {
-                try data.write(to: file.absoluteURL)
-            } catch {
-                print("DEBUG: \(error.localizedDescription)")
-            }
-            
+
+        do {
+            try dataImage.write(to: file.absoluteURL)
+        } catch {
+            print("DEBUG: \(error.localizedDescription)")
         }
+            
+        
     }
     
-    func readAllImages(from nameFolder: String, with family: FamilyFolderType) -> [UIImage] {
+    func readAllImages(from nameFolder: String,
+                       with family: FamilyFolderType)
+    -> [UIImage] {
+        
         guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent(family.rawValue) else {return []}
-
         guard var urls = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: [.creationDateKey]) else {
             return []
         }
@@ -105,9 +100,7 @@ class FileService {
         
         var images: [UIImage] = []
         
-        print("DEBUG: \(urls.count) ccc")
         urls.forEach({ url in
-            print("DEBUG: \(url)")
             guard let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {return}
             images.append(image)
         })
@@ -116,41 +109,42 @@ class FileService {
     }
     
     func getButtonChecklistModel(from nameFolder: String) -> ButtonCheckListModel {
-        guard let folder = FileService.relativePath(with: nameFolder)?.appendingPathComponent(AppConstant.folderButtonChecklistName)
+        guard let folderCheck = FileService.relativePath(with: nameFolder)?.appendingPathComponent(FamilyFolderType.check.rawValue),
+              let folderUncheck = FileService.relativePath(with: nameFolder)?.appendingPathComponent(FamilyFolderType.uncheck.rawValue)
             else {return ButtonCheckListModel()}
         
-        print("DEBUG: \(folder.absoluteURL) ssss")
-        
-        guard var urls = try? FileManager.default.contentsOfDirectory(at: folder, includingPropertiesForKeys: nil)
+                
+        guard var urlsCheck = try? FileManager.default.contentsOfDirectory(at: folderCheck, includingPropertiesForKeys: nil),
+              var urlUncheck = try? FileManager.default.contentsOfDirectory(at: folderUncheck, includingPropertiesForKeys: nil)
             else { return ButtonCheckListModel() }
         
-        urls = urls.filter({ url in
+        urlsCheck = urlsCheck.filter({ url in
             return url.absoluteString.first != "." })
         
+        urlUncheck = urlUncheck.filter({ url in
+            return url.absoluteString.first != "." })
+        
+        
         var model = ButtonCheckListModel()
-        print("DEBUG: \(urls.count) siuu")
-        urls.forEach { url in
-            let name = url.lastPathComponent
-            let components = name.split(separator: "-")
-            if components.count >= 2 {
-                let nameType = String(components[0])
-
-                let type = ButtonCheck.getType(name: nameType)
-                guard let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {return}
-                print("DEBUG: zo")
-                if type == .checked {
-                    model.checkImage = image
-                } else {
-                    model.uncheckImage = image
-                }
-                
-            }
+        urlsCheck.forEach { url in
+            guard let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {return}
+            
+            model.checkImage.append(image)
+            
+        }
+        
+        urlUncheck.forEach { url in
+            guard let data = try? Data(contentsOf: url), let image = UIImage(data: data) else {return}
+            
+            model.uncheckImage.append(image)
         }
         
         return model
     }
     
-    func writeToBtnCheckListFolder(with nameFolder : String, with imageName: String, sizeBtn: ButtonCheck) {
+    func writeToBtnCheckListFolder(with nameFolder: String,
+                                   with imageName: String,
+                                   sizeBtn: ButtonCheck) {
         
         let image = UIImage(named: imageName)
         
@@ -160,17 +154,17 @@ class FileService {
         }
         
         //Image-Folder/Checklist-Anime/
-        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(WDFolderType.checkList.nameId)-\(nameFolder)")?.path ?? "") {
-            try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(WDFolderType.checkList.nameId)-\(nameFolder)")!, withIntermediateDirectories: false)
+        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(WDFolderType.routineMonitor.nameId)-\(nameFolder)")?.path ?? "") {
+            try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(WDFolderType.routineMonitor.nameId)-\(nameFolder)")!, withIntermediateDirectories: false)
         }
         
         //Image-Folder/Checklist-Anime/FolderButtonChecklistName-EZTech
-        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(WDFolderType.checkList.nameId)-\(nameFolder)")?.appendingPathComponent(AppConstant.folderButtonChecklistName).path ?? "") {
-            try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(WDFolderType.checkList.nameId)-\(nameFolder)")!.appendingPathComponent(AppConstant.folderButtonChecklistName), withIntermediateDirectories: false)
+        if !FileManager.default.fileExists(atPath: FileService.relativePath(with: "\(WDFolderType.routineMonitor.nameId)-\(nameFolder)")?.appendingPathComponent(WDConstant.folderButtonChecklistName).path ?? "") {
+            try? FileManager.default.createDirectory(at: FileService.relativePath(with: "\(WDFolderType.routineMonitor.nameId)-\(nameFolder)")!.appendingPathComponent(WDConstant.folderButtonChecklistName), withIntermediateDirectories: false)
         }
         
         //Image-Folder/Background-Anime/FolderButtonChecklistName-EZTech/Anya.jpeg
-        guard let file = FileService.relativePath(with: "\(WDFolderType.checkList.nameId)-\(nameFolder)")?.appendingPathComponent(AppConstant.folderButtonChecklistName).appendingPathComponent("\(sizeBtn.nameId)-\(imageName).jpeg") else {return}
+        guard let file = FileService.relativePath(with: "\(WDFolderType.routineMonitor.nameId)-\(nameFolder)")?.appendingPathComponent(WDConstant.folderButtonChecklistName).appendingPathComponent("\(sizeBtn.nameId)-\(imageName).jpeg") else {return}
 
         FileManager.default.createFile(atPath: file.lastPathComponent, contents: nil)
         

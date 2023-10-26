@@ -81,72 +81,78 @@ struct WeatherView: View {
             .onAppear {
                 print("DEBUG: siuuu")
                 WidgetCenter.shared.reloadAllTimelines()
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "luffy",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "sakura",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "sasuke",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "sanji",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "m1",
-//                                                 widgetType: .backgroud, familySize: .small)
-//                
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "m2",
-//                                                 widgetType: .backgroud, familySize: .small)
-//                
-//                FileService.shared.writeToSource(with: "Anime",
-//                                                 with: "m3",
-//                                                 widgetType: .backgroud, familySize: .small)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "1",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "2",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "3",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "4",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "5",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "6",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Mèo",
-//                                                 with: "7",
-//                                                 widgetType: .backgroud, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Checklist",
-//                                                 with: "anya",
-//                                                 widgetType: .checkList, familySize: .medium)
-//                
-//                FileService.shared.writeToSource(with: "Checklist",
-//                                                 with: "m1",
-//                                                 widgetType: .checkList, familySize: .small)
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "luffy",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "sakura",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "sasuke",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "sanji",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "m1",
+                //                                                 widgetType: .backgroud, familySize: .small)
+                //
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "m2",
+                //                                                 widgetType: .backgroud, familySize: .small)
+                //
+                //                FileService.shared.writeToSource(with: "Anime",
+                //                                                 with: "m3",
+                //                                                 widgetType: .backgroud, familySize: .small)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "1",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "2",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "3",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "4",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "5",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "6",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Mèo",
+                //                                                 with: "7",
+                //                                                 widgetType: .backgroud, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Checklist",
+                //                                                 with: "anya",
+                //                                                 widgetType: .checkList, familySize: .medium)
+                //
+                //                FileService.shared.writeToSource(with: "Checklist",
+                //                                                 with: "m1",
+                //                                                 widgetType: .checkList, familySize: .small)
                 
-                FileService.shared.writeToBtnCheckListFolder(with: "Checklist", with: "sasuke", sizeBtn: .checked)
-                FileService.shared.writeToBtnCheckListFolder(with: "Checklist", with: "sakura", sizeBtn: .uncheck)
+                //                FileService.shared.writeToBtnCheckListFolder(with: "Checklist", with: "sasuke", sizeBtn: .checked)
+                //                FileService.shared.writeToBtnCheckListFolder(with: "Checklist", with: "sakura", sizeBtn: .uncheck)
+                
+            
+                WDNetworkManager.shared.requestApi { _ in
+                    
+                }
+                
             }
         })
         

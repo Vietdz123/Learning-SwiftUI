@@ -54,7 +54,7 @@ struct DayView: View {
         VStack(content: {
             Button(intent: ToggleButtonIntent(id: model.day.rawValue)) {
                 Image(uiImage:  ImageDataViewModel.shared.dateCheckList[model.day.rawValue].isChecked ?
-                      btnCLModel.checkImage : btnCLModel.uncheckImage)
+                      btnCLModel.checkImage.shuffled().first ?? UIImage(named: AssetConstant.checklistButton)! : btnCLModel.uncheckImage.shuffled().first ?? UIImage(named: AssetConstant.unchecklistButton)!)
                 .resizable()
                 .frame(width: 60, height: 35)
             }
